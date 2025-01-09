@@ -46,6 +46,27 @@ table {
 
 /* TYPOGRAPHY */
 
+ body {
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: .85em;
+ }
+
+ h1 {
+    font-weight: 700;
+    font-size: 3em;
+ }
+
+ h2 {
+    font-weight: 500;
+    font-size: 1.75em;
+ }
+
+ h3{
+    font-family: "Fredoka";
+    font-weight: 400;
+    font-size: 1.25em;
+ }
 
 
 /* ELEMENTS */
