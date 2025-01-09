@@ -1,81 +1,99 @@
-/* Meyers CSS Reset */
+/* RESET */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+h1, h2, h3, p, ul, ol {
 	margin: 0;
 	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+
+ul, ol {
+	list-style-type: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
 }
 
 /* TYPOGRAPHY */
 
- body {
+header {
     font-family: "Inter";
     font-weight: 400;
     font-size: .85em;
- }
+}
 
- h1 {
+h1 {
     font-weight: 700;
-    font-size: 3em;
- }
+    font-size: 3.75em;
+    text-transform: uppercase;
+}
 
- h2 {
+h2 {
     font-weight: 500;
-    font-size: 1.75em;
- }
+    font-size: 1.9em;
+}
 
- h3{
+h3 {
     font-family: "Fredoka";
     font-weight: 400;
-    font-size: 1.25em;
- }
+    font-size: 1.5em;
+}
 
+main {
+    font-family: "Fredoka";
+    font-weight: 400;
+}
 
 /* ELEMENTS */
+
+body {
+    width: 1000px;
+    margin: auto;
+    align-content: center;
+}
+
+header {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "A A A ."
+    "C C C .";
+    justify-content: center;
+}
+
+header h1 {
+    grid-area: A;
+}
+
+header h2 {
+    grid-area: C;
+}
+
+header img {
+    float: right;
+}
 
 header img {
     animation: opacity 4s;
     animation-iteration-count: infinite;
+    grid-area: image;
 }
 
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "1 2 3 4";
+    justify-content: center;
+}
+
+h3 {
+    text-align: center;
+}
 
 /* ANIMATION */
 
