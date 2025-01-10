@@ -131,11 +131,16 @@ h3 {
 
 article ul {
     background-color: #FFFBEF;
+    height: 100%;
     border-style : Solid;
     border-color : #E8E3D6;
     border-width : 3px;
     border-radius : 18px;
     padding: 15px 15px 15px 30px;
+
+    /* display: flex;
+    flex-direction: column;
+    column-fill: balance; */
 }
 
 article ul li {
