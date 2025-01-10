@@ -80,18 +80,18 @@ body {
 header {
     text-align: center;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 145px;
     grid-template-rows: 65px;
     grid-template-areas: 
     "A A A B"
     "C C C B";
-    column-gap: 15px;
+    /* column-gap: 15px; */
     background-color: #FFFBEF;
     border-style : Solid;
     border-color : #E8E3D6;
     border-width : 3px;
     margin-bottom: 65px;
-    padding: 30px 50px 40px 120px;
+    padding: 30px 50px 40px 115px;
 }
 
 h1 {
