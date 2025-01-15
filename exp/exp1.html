@@ -7,16 +7,30 @@
 </head>
 <body>
     <h1>Experiment 1</h1>
-    <!-- Add a tagline with an <h2> that lets users know to open the console to see the functionality of the code. -->
-    <h2></h2>
+    <h2>How to Open Console:
+    <ol>
+        <li>Right click on the browser window</li>
+        <li>Click on "Inspect"</li>
+        <li>Click on "Console" Tab</li>
+    </ol></h2>
 
     <script>
-        //Insert comment that explains what your program does
+        //This program writes a loop that makes seven calls to console.log to output the following triangle:
+        /*
+        #
+        ##
+        ###
+        ####
+        #####
+        ######
+        #######
+        */
 
+        var hashSymbol = ["#", "##", "###", "####", "#####", "######", "#######"]; //Sequence
 
-        //You must include a sequence, selection and loop in your code
-        //Insert comment labeling at least one sequence, one selection and one loop
-        
+        for (var i=0; i<hashSymbol.length; i++) { //Loop
+            console.log(hashSymbol[i]); //Selection
+        } 
     </script>
 </body>
 </html>
