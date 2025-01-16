@@ -163,9 +163,8 @@ article ul li {
 }
 
 footer {
-    position: fixed;
+    display: flex;
     bottom: 0;
-    width: 55.8em;
 
     background-color: #FFFBEF;
     border-style : Solid;
@@ -173,6 +172,12 @@ footer {
     border-width : 3px;
     padding: 32px 50px 32px 50px;
     text-align: center;
+}
+
+footer p {
+    align-items: center;
+    justify-content: center;
+    margin: auto;
 }
 
 /****** ANIMATION *****/
