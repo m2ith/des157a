@@ -80,17 +80,34 @@ body {
 }
 
 header {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    margin: auto; */
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 152px;
+    grid-template-rows: 65px;
+    grid-template-areas: 
+    "A A A B"
+    "C C C B";
 
     background-color: #FFFBEF;
     border-style : Solid;
     border-color : #E8E3D6;
     border-width : 3px;
     margin-bottom: 65px;
-    padding: 40px 50px;
+    padding: 40px 50px 40px 125px;
+}
+
+h1 {
+    grid-area: A;
+}
+
+header img {
+    float: left;
+    grid-area: B;
+    padding-top: 10px;
 }
 
 footer {
