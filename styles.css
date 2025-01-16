@@ -154,6 +154,10 @@ article ul li {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 55.8em;
+
     background-color: #FFFBEF;
     border-style : Solid;
     border-color : #E8E3D6;
