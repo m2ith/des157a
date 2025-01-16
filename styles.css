@@ -27,37 +27,46 @@ h1 {
     font-weight: 700;
     font-size: 4.4em;
     text-transform: uppercase;
+    color: #3d280a;
 }
 
 h2 {
     font-weight: 500;
     font-size: 2.26em;
+    color: #3d280a;
 }
 
 h3 {
     font-family: "Fredoka";
     font-weight: 400;
     font-size: 1.25em;
+    color: white;
 }
 
 main {
     font-family: "Fredoka";
     font-weight: 400;
+    color: #3d280a;
 }
 
 footer {
     font-family: "Inter";
     font-weight: 400;
+    color: #3d280a;
 }
 
 /***** LINKS *****/
 
 a:link {
     text-decoration: none;
-    color: black;
+    color: #3d280a;
 }
 
 a:hover {
+    color: #d3212a;
+}
+
+main a:hover {
     color: #d3212a;
 }
   
@@ -200,10 +209,13 @@ footer {
 
 @keyframes colorchange {
     0% { 
-        color: black;
+        color: #3d280a;
     }
-    100% { 
+    50% { 
         color: #D3212A;
+    }
+    100% {
+        color: #3d280a;
     }
 }
 
