@@ -80,9 +80,9 @@ header {
     margin: auto;
 
     background-color: #FFFBEF;
-    border-style : Solid;
-    border-color : #E8E3D6;
-    border-width : 3px;
+    border-style: Solid;
+    border-color: #E8E3D6;
+    border-width: 3px;
     margin-bottom: 65px;
     padding: 40px 50px;
 }
@@ -98,9 +98,9 @@ footer {
     bottom: 0;
 
     background-color: #FFFBEF;
-    border-style : Solid;
-    border-color : #E8E3D6;
-    border-width : 3px;
+    border-style: Solid;
+    border-color: #E8E3D6;
+    border-width: 3px;
     padding: 32px 50px 32px 50px;
     margin-top: 165px;
     text-align: center;
