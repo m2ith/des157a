@@ -16,39 +16,43 @@
         
         document.querySelector(`h1`).style.fontFamily = "Arial";
 
-        var yourName = prompt("Please enter your name", "");
-        var food = ["dumplings", "BBQ pork", "apples", "hot pot", "mandarins"];
+        var yourName = prompt("Enter your name:", "");
+        var food = ["dumplings", "BBQ pork", "apples", "hotpot", "mandarins"];
 
-        var messageGreeting = document.getElementById("firstName");
-        var foodGift = document.getElementById("giftFood");
+        var myName = document.querySelector(`#firstName`);
+        var foodGift = document.querySelector(`#giftFood`);
 
-        //Prompt Name and Output Function
+        //Prompt name function
         function hello(name) {
             if (name == null || name == "") {
-                messageGreeting.innerHTML = ("You didn't give me a name... :-(");
+                myName.innerHTML = ("You didn't give me a name... :-(");
             } else {
-                messageGreeting.innerHTML = (`Hello ${name}, and welcome!`);
+                myName.innerHTML = (`Hello ${name}! Nice to meet you.`);
             }
         }
 
-        //Randomizes Food Function
+        //Randomizes food function
         function randomInt(min, max) {
             return Math.floor((max-min+1) * Math.random()) + min;
         }
 
-        //Gift Function
+        //Gift function
         function hospitality(name, gift) {
+            console.log(hello(name));
+
             var randomGift = gift[randomInt(0, gift.length-1)];
 
-            foodGift.innerHTML = (`${name}, would you like some ${foodGift}?`);
+            foodGift.innerHTML = (`${name}, would you like some ${randomGift}?`);
         }
 
-        //Changes appearance of paragraph text
+        hospitality(yourName, food);
+
+        //Changes appearances
         var myParagraphs = document.querySelectorAll(`p`);
 
         for (var i=0; i<myParagraphs.length; i++) {
-            //myParagraphs[i].style.fontWeight = "bold";
             myParagraphs[i].style.fontFamily = "Arial";
+            myParagraphs[i].style.fontSize = "1em";
         }
     </script>
 </body>
