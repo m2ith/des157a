@@ -7,17 +7,49 @@
 </head>
 <body>
     <h1>Experiment 2</h1>
-    <h2>How to Open Console:
-    <ol>
-        <li>Right click on the browser window</li>
-        <li>Click on "Inspect"</li>
-        <li>Click on "Console" Tab</li>
-    </ol></h2>
+
+    <p id="firstName"></p>
+    <p id="giftFood"></p>
 
     <script>
         //This program...
         
+        document.querySelector(`h1`).style.fontFamily = "Arial";
 
+        var yourName = prompt("Please enter your name", "");
+        var food = ["dumplings", "BBQ pork", "apples", "hot pot", "mandarins"];
+
+        var messageGreeting = document.getElementById("firstName");
+        var foodGift = document.getElementById("giftFood");
+
+        //Prompt Name and Output Function
+        function hello(name) {
+            if (name == null || name == "") {
+                messageGreeting.innerHTML = ("You didn't give me a name... :-(");
+            } else {
+                messageGreeting.innerHTML = (`Hello ${name}, and welcome!`);
+            }
+        }
+
+        //Randomizes Food Function
+        function randomInt(min, max) {
+            return Math.floor((max-min+1) * Math.random()) + min;
+        }
+
+        //Gift Function
+        function hospitality(name, gift) {
+            var randomGift = gift[randomInt(0, gift.length-1)];
+
+            foodGift.innerHTML = (`${name}, would you like some ${foodGift}?`);
+        }
+
+        //Changes appearance of paragraph text
+        var myParagraphs = document.querySelectorAll(`p`);
+
+        for (var i=0; i<myParagraphs.length; i++) {
+            //myParagraphs[i].style.fontWeight = "bold";
+            myParagraphs[i].style.fontFamily = "Arial";
+        }
     </script>
 </body>
 </html>
