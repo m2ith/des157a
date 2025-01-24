@@ -7,25 +7,31 @@
 </head>
 <body>
     <h1>Experiment 2</h1>
+    <h2>This program prints a greeting to the user after the user enters their name. If the user inputs a name, they receive a gift offering. If there is no name entered, then no gift is offered.</h2>
 
     <p id="firstName"></p>
     <p id="giftFood"></p>
+    <p id="noGift"></p>
 
     <script>
-        //This program...
+        //This program prints a greeting to the user after the user enters their name. If the user inputs a name, they receive a gift offering. If there is no name entered, then no gift is offered.
         
         document.querySelector(`h1`).style.fontFamily = "Arial";
+        document.querySelector(`h2`).style.fontFamily = "Arial";
 
         var yourName = prompt("Enter your name:", "");
         var food = ["dumplings", "BBQ pork", "apples", "hotpot", "mandarins"];
 
         var myName = document.querySelector(`#firstName`);
         var foodGift = document.querySelector(`#giftFood`);
+        var notReceived = document.querySelector(`#noGift`);
+
+        document.querySelector(`#firstName`).style.color = "#D3212A";
 
         //Prompt name function
         function hello(name) {
             if (name == null || name == "") {
-                myName.innerHTML = ("You didn't give me a name... :-(");
+                myName.innerHTML = ("You didn't give me a name... &#9785;&#65039;");
             } else {
                 myName.innerHTML = (`Hello ${name}! Nice to meet you.`);
             }
@@ -38,10 +44,14 @@
 
         //Gift function
         function hospitality(name, gift) {
-            console.log(hello(name));
+            hello(name);
+
+            if (name == null || name == "") {
+                notReceived.innerHTML = ("There are no gifts to be offered.");
+                return;
+            }
 
             var randomGift = gift[randomInt(0, gift.length-1)];
-
             foodGift.innerHTML = (`${name}, would you like some ${randomGift}?`);
         }
 
@@ -54,6 +64,11 @@
             myParagraphs[i].style.fontFamily = "Arial";
             myParagraphs[i].style.fontSize = "1em";
         }
+
+        document.querySelector(`#firstName`).style.fontSize = "20px";
+        document.querySelector(`#firstName`).style.fontWeight = "bold";
+
+        document.querySelector(`h2`).style.fontSize = "15px";
     </script>
 </body>
 </html>
