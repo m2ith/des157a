@@ -133,11 +133,11 @@ article {
 
 article h2 {
     text-align: center;
-    padding: 15px;
+    padding: 20px 15px;
     background-color: #d3212a;
     /* margin-bottom: 20px; */
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 article p {
@@ -184,4 +184,8 @@ footer p {
     align-items: center;
     justify-content: center;
     margin: auto;
+}
+
+.spacer {
+    padding: 15px;
 }
