@@ -31,7 +31,7 @@ h1 {
 h2 {
     font-weight: 500;
     font-size: 24px;
-    /* color: white; */
+    color: white;
 }
 
 .class {
@@ -44,6 +44,11 @@ form {
     font-size: 16.23px;
 }
 
+#madlibs-output p {
+    font-weight: 400;
+    font-size: 19.22px;
+}
+
 /***** ELEMENTS *****/
 
 body {
@@ -54,4 +59,37 @@ body {
 
 .class {
     color: #EFEFEF;
+}
+
+/* NOT UPDATING */
+#madlibs-output {
+    width: 381px;
+}
+
+h2 {
+    background-color: #D3212A;
+    padding: 30.6px 41px;
+}
+
+form {
+    border-radius: 0px 0px 14.606px 14.606px;
+    border: 4.869px solid #D3212A;
+    padding: 30.6px 41px;
+}
+
+input, label {
+    display: block;
+}
+
+#madlibs-output {
+    width: 317.075px;
+    background-color: white;
+    border-radius: 17.295px;
+    border: 4.804px solid #D3212A;
+    padding: 29.79px 30.41px;
+}
+
+#madlibs-output em {
+    color: #D3212A;
+    font-style: normal;
 }
