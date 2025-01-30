@@ -34,7 +34,7 @@ h2 {
     color: white;
 }
 
-.float {
+main p {
     font-weight: 600; 
     font-size: 91.63px;
     color: #EFEFEF;
@@ -63,6 +63,104 @@ input:focus {
 #madlibs-output p {
     font-weight: 400;
     font-size: 19.22px;
+    color: black;
+}
+
+/***** IMAGE POSITIONING *****/
+
+.parent {
+    position: relative;
+    top: 115px;
+    left: 95px;
+}
+
+.image1 {
+    position: relative;
+    top: 20px;
+    left: 0;
+}
+
+.image2 {
+    position: absolute;
+    top: -120px;
+    left: 0;
+}
+
+/***** ? POSITIONING *****/
+
+.parent2 {
+    position: relative;
+    top: -300px;
+    left: 0px;
+  }
+
+#float1 {
+    animation: floatAnimation1 10s infinite ease-in-out;
+    transform: rotate(1.892deg);
+}
+
+#float2 {
+    animation: floatAnimation2 10s infinite ease-in-out;
+    transform: rotate(-3.03deg);
+}
+
+#float3 {
+    animation: floatAnimation3 10s infinite ease-in-out;
+    transform: rotate(17.479deg);
+}
+
+#float4 {
+    animation: floatAnimation4 10s infinite ease-in-out;
+    transform: rotate(-21.451deg);
+}
+
+@keyframes floatAnimation1 {
+	0% { 
+	    transform: translate(0%, -50%); 
+	}
+	50% { 
+	    transform: translate(0%, -30%); 
+	}
+	100% { 
+	    transform: translate(0, -50%); 
+	}
+}
+
+@keyframes floatAnimation2 {
+	0% { 
+	    transform: translate(50%, 0); 
+	}
+	50% { 
+	    transform: translate(50%, 20%); 
+	}
+	100% { 
+	    transform: translate(50%, 0); 
+	}
+}
+
+@keyframes floatAnimation3 {
+	0% { 
+	    transform: translate(90%, -290%); 
+	}
+	50% { 
+	    transform: translate(90%, -270%); 
+	}
+	100% { 
+	    transform: translate(90%, -290%); 
+	}
+}
+
+/* CHANGE */
+@keyframes floatAnimation4--- {
+	0% { 
+	    transform: translate(0, 0); 
+	}
+	50% { 
+	    transform: translate(50%, 50%); 
+	}
+	100% { 
+	    transform: translate(0, 0); 
+	}
 }
 
 /***** ELEMENTS *****/
@@ -71,6 +169,11 @@ body {
     width: 1200px;
     height: 750px;
     margin: auto;
+}
+
+h1 {
+    padding-top: 97px;
+    padding-left: 125px;
 }
 
 .class {
