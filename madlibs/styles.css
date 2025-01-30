@@ -17,7 +17,32 @@ img {
 
 /***** TYPOGRAPHY *****/
 
+body {
+    font-family: "Fredoka";
+}
 
+h1 {
+    font-weight: 600; 
+    line-height: 88.7px;
+    font-size: 91.63px;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 24px;
+    /* color: white; */
+}
+
+.class {
+    font-weight: 600; 
+    font-size: 91.63px;
+}
+
+form {
+    font-weight: 400;
+    font-size: 16.23px;
+}
 
 /***** ELEMENTS *****/
 
@@ -25,4 +50,8 @@ body {
     width: 1200px;
     height: 750px;
     margin: auto;
+}
+
+.class {
+    color: #EFEFEF;
 }

@@ -4,8 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MadLibs</title>
+
+    <!-- Normalize CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- JavaScript -->
+     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Whose Glasses Are These?</h1>
+    <header>
+        <h1>Whose Glasses Are These?</h1>
+    </header>
+    
+    <main>
+        <img src="images/glasses-drawing.png" alt="glasses" width="504" height="379">
+
+        <p class="float">?</p>
+        <p class="float">?</p>
+        <p class="float">?</p>
+
+        <div>
+            <h2>Input An/A...</h2>
+
+            <form>
+                <label for="adjective1">Adjective</label>
+                <input type="text" id="adjective1" required>
+        
+                <label for="noun">Noun</label>
+                <input type="text" id="noun" required>
+        
+                <label for="place">Name of a Place</label>
+                <input type="text" id="place" required>
+        
+                <label for="food1">Name of a Food</label>
+                <input type="text" id="food1" required>
+        
+                <label for="food2">Name of a Food</label>
+                <input type="text" id="food2" required>
+        
+                <label for="food3">Name of a Food</label>
+                <input type="text" id="food3" required>
+        
+                <label for="music">Music Genre</label>
+                <input type="text" id="music" required>
+        
+                <label for="adjective2">Adjective</label>
+                <input type="text" id="adjective2" required>
+        
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <img src="images/background.png" alt="madlib background" width="1200" height="750">
+
+        <img src="images/whiskers-drawing.png" alt="whiskers the biker cat" width="850.92" height="638.4">
+
+        <section>
+            <p>They belong to Whiskers, the Biker cat! He loves to rev his calm motorcycle. He belongs to the women gang. They like to go on fun adventures exploring different places, such as Philz. Whiskers is a big foodie so he LOVES eating food. He enjoys eating: pad thai, pomegranates, and salmon. He also loves listening to music! A favorite genre of music he likes to listen to is alternative. Whiskers also enjoys going on sad rides with his friends.</p>
+        </section>
+    </main>
 </body>
 </html>
