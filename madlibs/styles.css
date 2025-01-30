@@ -90,7 +90,7 @@ input:focus {
 
 .parent2 {
     position: relative;
-    top: -300px;
+    top: -280px;
     left: 0px;
   }
 
@@ -116,50 +116,49 @@ input:focus {
 
 @keyframes floatAnimation1 {
 	0% { 
-	    transform: translate(0%, -50%); 
+	    transform: translate(0%, 90%); 
 	}
 	50% { 
-	    transform: translate(0%, -30%); 
+	    transform: translate(0%,110%); 
 	}
 	100% { 
-	    transform: translate(0, -50%); 
+	    transform: translate(0, 90%); 
 	}
 }
 
 @keyframes floatAnimation2 {
 	0% { 
-	    transform: translate(50%, 0); 
+	    transform: translate(52%, 0); 
 	}
 	50% { 
-	    transform: translate(50%, 20%); 
+	    transform: translate(52%, 20%); 
 	}
 	100% { 
-	    transform: translate(50%, 0); 
+	    transform: translate(52%, 0); 
 	}
 }
 
 @keyframes floatAnimation3 {
 	0% { 
-	    transform: translate(90%, -290%); 
+	    transform: translate(96%, -320%); 
 	}
 	50% { 
-	    transform: translate(90%, -270%); 
+	    transform: translate(96%, -300%); 
 	}
 	100% { 
-	    transform: translate(90%, -290%); 
+	    transform: translate(96%, -320%); 
 	}
 }
 
-/* CHANGE */
-@keyframes floatAnimation4--- {
+@keyframes floatAnimation4 {
 	0% { 
-	    transform: translate(0, 0); 
+	    transform: translate(53%, 0); 
 	}
 	50% { 
-	    transform: translate(50%, 50%); 
+	    transform: translate(53%, 20%); 
 	}
 	100% { 
-	    transform: translate(0, 0); 
+	    transform: translate(53%, 0); 
 	}
 }
 
@@ -172,8 +171,8 @@ body {
 }
 
 h1 {
-    padding-top: 97px;
-    padding-left: 125px;
+    padding-top: 50px;
+    padding-left: 50px;
 }
 
 .class {
@@ -183,12 +182,15 @@ h1 {
 h2 {
     border-radius: 14.606px 14.606px 0px 0px;
     background-color: #D3212A;
-    padding: 25px 41px;
+    padding: 20px 41px;
     text-align: center;
 }
 
 #madlibs-input {
     width: 395px;
+    position: absolute;
+    top: 180px;
+    left: 850px;
 }
 
 #madlibs-input form {
@@ -197,7 +199,8 @@ h2 {
 	grid-gap: 15px;
     border-radius: 0px 0px 14.606px 14.606px;
     border: 4.869px solid #D3212A;
-    padding: 30.6px 41px;
+    padding: 27px 35px;
+    background-color: white;
 }
 
 form label {
@@ -219,6 +222,8 @@ input[type=submit] {
     border: none;
     padding: 9px 35px;
     width: 125px;
+    margin-top: 10px;
+    float: right;
 }
 
 #madlibs-output {
