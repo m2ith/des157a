@@ -92,6 +92,24 @@ input:focus {
     left: 0;
 }
 
+.parent3 {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.image3 {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.image4 {
+    position: absolute;
+    top: 135px;
+    left: 20px;
+}
+
 /***** ? POSITIONING *****/
 
 .parent2 {
@@ -174,15 +192,12 @@ body {
     width: 1200px;
     height: 750px;
     margin: auto;
+    overflow-x: hidden;
 }
 
 h1 {
     padding-top: 75px;
     padding-left: 70px;
-}
-
-.class {
-    color: #EFEFEF;
 }
 
 h2 {
@@ -233,15 +248,18 @@ button {
 }
 
 button:hover {
-    background-color: #D3212A;
+    background-color: #3b3b3b;
 }
 
 #madlibs-output {
-    width: 317.075px;
+    width: 280px;
     background-color: white;
     border-radius: 17.295px;
     border: 4.804px solid #D3212A;
     padding: 29.79px 30.41px;
+    position: relative;
+    top: -540px;
+    left: 800px;
 }
 
 #madlibs-output em {
