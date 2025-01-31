@@ -15,6 +15,12 @@ img {
 	display: block;
 }
 
+/***** SCROLL *****/
+
+html {
+    scroll-behavior: smooth;
+}
+
 /***** TYPOGRAPHY *****/
 
 body {
@@ -50,7 +56,7 @@ form {
     font-size: 16.23px;
 }
 
-input[type=submit] {
+button {
     color: white;
     font-size: 18px;
     font-weight: 500;
@@ -76,13 +82,13 @@ input:focus {
 
 .image1 {
     position: relative;
-    top: 20px;
+    top: 45px;
     left: 0;
 }
 
 .image2 {
     position: absolute;
-    top: -120px;
+    top: -95px;
     left: 0;
 }
 
@@ -171,8 +177,8 @@ body {
 }
 
 h1 {
-    padding-top: 50px;
-    padding-left: 50px;
+    padding-top: 75px;
+    padding-left: 70px;
 }
 
 .class {
@@ -188,9 +194,9 @@ h2 {
 
 #madlibs-input {
     width: 395px;
-    position: absolute;
-    top: 180px;
-    left: 850px;
+    position: relative;
+    top: -648.5px;
+    left: 745px;
 }
 
 #madlibs-input form {
@@ -216,7 +222,7 @@ input[type=text] {
     width: 136px;
 }
 
-input[type=submit] {
+button {
     border-radius: 10.723px 10.723px 10.726px 10.726px;
     background: #777777;
     border: none;
@@ -224,6 +230,10 @@ input[type=submit] {
     width: 125px;
     margin-top: 10px;
     float: right;
+}
+
+button:hover {
+    background-color: #D3212A;
 }
 
 #madlibs-output {
