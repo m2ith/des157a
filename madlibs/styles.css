@@ -259,7 +259,7 @@ button:hover {
     100% { transform: rotate(0deg); }
   }
   
-  .image4 {
+.image4 {
     animation: wiggle 1s infinite ease-in-out;
     transition: transform 0.1s;
-  }
+}
