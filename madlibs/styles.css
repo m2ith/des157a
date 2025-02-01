@@ -139,51 +139,27 @@ input:focus {
 }
 
 @keyframes floatAnimation1 {
-	0% { 
-	    transform: translate(0%, 90%); 
-	}
-	50% { 
-	    transform: translate(0%,110%); 
-	}
-	100% { 
-	    transform: translate(0, 90%); 
-	}
+	0% { transform: translate(0%, 90%); }
+	50% { transform: translate(0%,110%); }
+	100% { transform: translate(0, 90%); }
 }
 
 @keyframes floatAnimation2 {
-	0% { 
-	    transform: translate(52%, 0); 
-	}
-	50% { 
-	    transform: translate(52%, 20%); 
-	}
-	100% { 
-	    transform: translate(52%, 0); 
-	}
+	0% { transform: translate(52%, 0); }
+	50% { transform: translate(52%, 20%); }
+	100% { transform: translate(52%, 0); }
 }
 
 @keyframes floatAnimation3 {
-	0% { 
-	    transform: translate(96%, -320%); 
-	}
-	50% { 
-	    transform: translate(96%, -300%); 
-	}
-	100% { 
-	    transform: translate(96%, -320%); 
-	}
+	0% { transform: translate(96%, -320%); }
+	50% { transform: translate(96%, -300%); }
+	100% { transform: translate(96%, -320%); }
 }
 
 @keyframes floatAnimation4 {
-	0% { 
-	    transform: translate(53%, 0); 
-	}
-	50% { 
-	    transform: translate(53%, 20%); 
-	}
-	100% { 
-	    transform: translate(53%, 0); 
-	}
+	0% { transform: translate(53%, 0); }
+	50% { transform: translate(53%, 20%); }
+	100% { transform: translate(53%, 0); }
 }
 
 /***** ELEMENTS *****/
