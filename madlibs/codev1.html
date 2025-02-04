@@ -17,7 +17,7 @@
     <link href="styles.css" rel="stylesheet">
 
     <!-- JavaScript -->
-     <script src="script.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -37,62 +37,61 @@
             <p id="float4">?</p>
         </div>
 
-        <section id="madlibs-input">
+        <article id="madlibs-input">
             <h2>Input an/a...</h2>
 
-            <form method="get">
+            <form id="myform" method="get">
                 <div>
                     <label for="adjective1">Adjective</label>
-                    <input type="text" id="adjective1" required>
+                    <input type="text" id="adjective1">
                 </div>
                 
                 <div>
                     <label for="noun">Noun</label>
-                    <input type="text" id="noun" required>
+                    <input type="text" id="noun">
                 </div>
                 
                 <div>
                     <label for="place">Name of a Place</label>
-                    <input type="text" id="place" required>
+                    <input type="text" id="place">
                 </div>
                 
                 <div>
                     <label for="food1">Name of a Food</label>
-                    <input type="text" id="food1" required>
+                    <input type="text" id="food1">
                 </div>
                 
                 <div>
                     <label for="food2">Name of a Food</label>
-                    <input type="text" id="food2" required>
+                    <input type="text" id="food2">
                 </div>
                 
                 <div>
                     <label for="food3">Name of a Food</label>
-                    <input type="text" id="food3" required>
+                    <input type="text" id="food3">
                 </div>
         
                 <div>
                     <label for="music">Music Genre</label>
-                    <input type="text" id="music" required>
+                    <input type="text" id="music">
                 </div>
                 
                 <div>
                     <label for="adjective2">Adjective</label>
-                    <input type="text" id="adjective2" required>
+                    <input type="text" id="adjective2">
                 </div>
             </form>
 
             <button type="submit" value="Submit">Submit</button>
-        </section>
+        </article>
 
-        <div class="parent3">
+        <div id="output" class="parent3">
             <img class="image3" src="images/background.png" alt="madlib background" width="1200" height="750">
             <img class="image4" src="images/whiskers-drawing.png" alt="whiskers the biker cat" width="850" height="638">
         </div>
 
-        <section id="madlibs-output">
-            <p>They belong to Whiskers, the Biker cat! He loves to rev his <em>(adjective 1)</em> motorcycle. He belongs to the <em>(noun)</em> gang. They like to go on fun adventures exploring different places, such as <em>(name of a place)</em>. Whiskers is a big foodie so he LOVES eating food. He enjoys eating: <em>(name of a food 1)</em>, <em>(name of a food 2)</em>, and <em>(name of a food 3)</em>. He also loves listening to music! A favorite genre of music he likes to listen to is <em>(music genre)</em>. Whiskers also enjoys going on <em>(adjective 2)</em> rides with his friends.</p>
-        </section>
+        <article id="madlibs-output"></article>
+        <!-- <p>They belong to Whiskers, the Biker cat! He loves to rev his <em>(adjective 1)</em> motorcycle. He belongs to the <em>(noun)</em> gang. They like to go on fun adventures exploring different places, such as <em>(name of a place)</em>. Whiskers is a big foodie so he LOVES eating food. He enjoys eating: <em>(name of a food 1)</em>, <em>(name of a food 2)</em>, and <em>(name of a food 3)</em>. He also loves listening to music! A favorite genre of music he likes to listen to is <em>(music genre)</em>. Whiskers also enjoys going on <em>(adjective 2)</em> rides with his friends.</p> -->
     </main>
 </body>
 </html>
