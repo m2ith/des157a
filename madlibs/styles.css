@@ -72,6 +72,10 @@ input:focus {
     color: black;
 }
 
+footer {
+    font-size: 1.1em;
+}
+
 /***** IMAGE POSITIONING *****/
 
 .parent {
@@ -238,9 +242,14 @@ button:hover {
     left: 800px;
 }
 
-#madlibs-output em {
+em {
     color: #D3212A;
     font-style: normal;
+}
+
+footer {
+    text-align: center;
+    padding-bottom: 25px;
 }
 
 /***** IMAGE4 WIGGLE ANIMATION *****/
