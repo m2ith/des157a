@@ -15,6 +15,7 @@
     const myForm = document.querySelector(`#form`);
     const madLib = document.querySelector(`#madlibs-output`);
     const formData = document.querySelectorAll(`input[type=text]`);
+    const submitButton = document.querySelector(`button[type="submit"]`);
 
     myForm.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -58,11 +59,9 @@
             eachField.value = "";
         }
     }
-
-    const submitButton = document.querySelector('button[type="submit"]');
+    
     submitButton.addEventListener("click", function (event) {
         event.preventDefault();
-        console.log('Submit button clicked');
         processFormData(myForm.elements);
     });
 })();
