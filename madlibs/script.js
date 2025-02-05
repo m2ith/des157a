@@ -22,6 +22,11 @@
         processFormData(formData);
     });
 
+    submitButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        processFormData(myForm.elements);
+    });
+
     function processFormData(formData) {
         const words = [];
         const emptyfields = [];
@@ -59,9 +64,4 @@
             eachField.value = "";
         }
     }
-    
-    submitButton.addEventListener("click", function (event) {
-        event.preventDefault();
-        processFormData(myForm.elements);
-    });
 })();
