@@ -100,7 +100,7 @@ header {
     align-items: center;
     justify-content: center;
     margin: auto; */
-    text-align: center;
+    text-align: left;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 152px;
     grid-template-rows: 65px;
@@ -110,7 +110,7 @@ header {
     background-color: #FFFBEF;
     border-bottom: 3px solid #E8E3D6;
     margin-bottom: 65px;
-    padding: 40px 50px 40px 125px;
+    padding: 40px 60px;
 }
 
 h1 {
@@ -118,7 +118,10 @@ h1 {
 }
 
 header img {
-    float: left;
+    animation: opacity 4s;
+    animation-iteration-count: infinite;
+
+    float: right;
     grid-area: B;
     padding-top: 10px;
 }
@@ -191,4 +194,18 @@ footer p {
 
 .spacer {
     padding: 15px;
+}
+
+/****** ANIMATION *****/
+
+@keyframes opacity {
+    0% { opacity: 1; }
+    12.5% { opacity: .9; }
+    25% { opacity: .8; }
+    37.5% { opacity: .7; }
+    50% { opacity: .6; }
+    62.5% { opacity: .7; }
+    75% { opacity: .8; }
+    87.5% { opacity: .9; }
+    100% { opacity: 1;} 
 }
