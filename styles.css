@@ -84,6 +84,18 @@ footer a:link {
     text-decoration: underline;
 }
 
+/***** AUDIO *****/
+
+audio {
+    width: 1000px;
+    height: 2em;
+    align-content: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+}
+
 /***** ELEMENTS *****/
 
 body {
@@ -231,12 +243,6 @@ footer p {
 }
 
 @keyframes scroll {
-    from { transform: translatex(-50%); }
+    from { transform: translatex(-100%); }
     to { transform: translatex(100%); }
 }
-
-/* Mobile View for Main Grid */
-/* display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center; */
