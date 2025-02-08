@@ -279,7 +279,7 @@ footer p {
 
     /* Audio Player */
     audio {
-        width: 400px;
+        width: 15em;
         display: block;
         margin-left: auto;
         margin-right: auto;
