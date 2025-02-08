@@ -251,6 +251,11 @@ footer p {
 
 @media screen and (max-width: 768px) {
 
+    /* H1 */
+    h1 {
+        line-height: 0.9em;
+    }
+
     /* Header */
     header {
         font-family: "Inter";
@@ -258,10 +263,11 @@ footer p {
         font-size: 0.52em;
         display: flex;
         flex-direction: column;
+        gap: 10px;
     }
 
     header img {
-        padding-top: 20px;
+        padding-top: 10px;
         float: left;
         animation: opacity infinite;
     }
@@ -304,7 +310,7 @@ footer p {
         font-size: 0.8em;
     }
 
-    /* H3 Elements */
+    /* H3 */
     h3 {
         font-family: "Fredoka";
         font-weight: 400;
