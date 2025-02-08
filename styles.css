@@ -292,6 +292,7 @@ footer p {
         max-width: 90%;
         margin: 0 auto;
         padding: 0 20px;
+        padding-bottom: 35px;
         row-gap: 10px;
     }
 
