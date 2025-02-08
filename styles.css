@@ -249,7 +249,8 @@ footer p {
 
 /****** RESPONSIVE *****/
 
-@media screen and (max-width: 768px) {
+/* Phone */
+@media screen and (max-width: 480px) {
 
     /* H1 */
     h1 {
@@ -337,6 +338,96 @@ footer p {
     }
 }
 
+/* Tablet */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+
+    /* H1 */
+    h1 {
+        line-height: 0.9em;
+    }
+
+    /* Header */
+    header {
+        font-size: 0.65em;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header img {
+        padding-top: 10px;
+        float: left;
+        animation: opacity infinite;
+    }
+
+    /* Banner */
+    #container {
+        font-size: 0.85em;
+    }
+
+    /* Audio Player */
+    audio {
+        width: 22em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Main */
+    main {
+        font-size: 0.9em;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 0 20px;
+        padding-bottom: 35px;
+        row-gap: 10px;
+    }
+
+    /* Projects */
+    .projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Project Links */
+    .project a {
+        font-size: 0.8em;
+    }
+
+    /* H3 */
+    h3 {
+        font-size: 1.1em;
+        text-align: center;
+        background-color: #D3212A;
+        color: white;
+        border-radius: 8px;
+        padding: 12px;
+        margin-bottom: 7px;
+    }
+
+    /* Article Lists */
+    article ul {
+        background-color: #FFFBEF;
+        height: 100%;
+        border: 3px Solid #E8E3D6;
+        border-radius: 18px;
+        padding: 15px 15px 15px 30px;
+    }
+
+    article {
+        margin-bottom: 20px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+/* Smaller Desktop */
 @media screen and (min-width: 768px) and (max-width: 1040px) {
 
     /* H1 */

@@ -68,7 +68,8 @@ footer a:link {
 /***** ELEMENTS *****/
 
 body {
-    width: 1000px;
+    width: 100%;
+    height: 100%;
     margin: auto;
     align-content: center;
 }
@@ -80,11 +81,9 @@ header {
     margin: auto;
 
     background-color: #FFFBEF;
-    border-style: Solid;
-    border-color: #E8E3D6;
-    border-width: 3px;
-    margin-bottom: 65px;
-    padding: 40px 50px;
+    border-bottom: 3px solid #E8E3D6;
+    margin-bottom: 50px;
+    padding: 40px 60px;
 }
 
 img {
@@ -98,11 +97,9 @@ footer {
     bottom: 0;
 
     background-color: #FFFBEF;
-    border-style: Solid;
-    border-color: #E8E3D6;
-    border-width: 3px;
+    border-top: 3px solid #E8E3D6;
     padding: 32px 50px 32px 50px;
-    margin-top: 65px;
+    margin-top: 50px;
     text-align: center;
 }
 
@@ -110,4 +107,80 @@ footer p {
     align-items: center;
     justify-content: center;
     margin: auto;
+}
+
+/****** RESPONSIVE *****/
+
+@media screen and (max-width: 768px) {
+
+    /* H1 */
+    h1 {
+        line-height: 0.9em;
+        font-size: 3em;
+        text-align: center;
+    }
+
+    /* H2 */
+    h2 {
+        font-size: 1.1em;
+        max-width: 100%;
+    }
+
+    /* Header */
+    header {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    header img {
+        padding-top: 10px;
+        float: left;
+        animation: opacity infinite;
+    }
+
+    /* Main */
+    main {
+        font-size: 0.9em;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0 20px;
+        row-gap: 10px;
+    }
+
+    /* Article */
+    article {
+        display: flex;
+        flex-direction: column;
+        max-width: 90%;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+
+    article h2 {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1040px) {
+
+    /* H1 */
+    h1 {
+        line-height: 0.9em;
+        font-size: 4em;
+        text-align: center;
+    }
+
+    /* Header */
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
 }
