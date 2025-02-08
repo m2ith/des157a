@@ -309,7 +309,7 @@ footer p {
 
     /* H3 */
     h3 {
-        font-size: 1em;
+        font-size: 1.1em;
         text-align: center;
         background-color: #D3212A;
         color: white;
@@ -349,5 +349,56 @@ footer p {
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+
+    /* Audio Player */
+    audio {
+        width: 60%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Main */
+    main {
+        font-size: 1.05em;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 0 20px;
+        padding-bottom: 35px;
+        row-gap: 10px;
+    }
+
+    /* Projects */
+    .projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    article {
+        margin-bottom: 20px;
+    }
+
+    /* H3 */
+    h3 {
+        font-size: 1.15em;
+        text-align: center;
+        background-color: #D3212A;
+        color: white;
+        border-radius: 8px;
+        padding: 12px;
+        margin-bottom: 7px;
+    }
+
+    /* Article Lists */
+    article ul {
+        background-color: #FFFBEF;
+        height: 100%;
+        border: 3px Solid #E8E3D6;
+        border-radius: 18px;
+        padding: 15px 15px 15px 30px;
     }
 }
