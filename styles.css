@@ -258,8 +258,6 @@ footer p {
 
     /* Header */
     header {
-        font-family: "Inter";
-        font-weight: 400;
         font-size: 0.52em;
         display: flex;
         flex-direction: column;
@@ -279,7 +277,7 @@ footer p {
 
     /* Audio Player */
     audio {
-        width: 18em;
+        width: 22em;
         display: block;
         margin-left: auto;
         margin-right: auto;
@@ -290,8 +288,6 @@ footer p {
 
     /* Main */
     main {
-        font-family: "Fredoka";
-        font-weight: 400;
         font-size: 0.9em;
         max-width: 90%;
         margin: 0 auto;
@@ -312,8 +308,6 @@ footer p {
 
     /* H3 */
     h3 {
-        font-family: "Fredoka";
-        font-weight: 400;
         font-size: 1em;
         text-align: center;
         background-color: #D3212A;
@@ -338,8 +332,6 @@ footer p {
 
     /* Footer */
     footer {
-        font-family: "Inter", sans-serif;
-        font-weight: 400;
         font-size: 0.9em;
     }
 }

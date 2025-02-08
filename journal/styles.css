@@ -209,3 +209,58 @@ footer p {
     87.5% { opacity: .9; }
     100% { opacity: 1;} 
 }
+
+/****** RESPONSIVE *****/
+
+@media screen and (max-width: 768px) {
+
+    /* H1 */
+    h1 {
+        line-height: 0.9em;
+        font-size: 4em;
+    }
+
+    /* H2 */
+    h2 {
+        font-size: 1.1em;
+        width: 387px;
+    }
+
+    /* Header */
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header img {
+        padding-top: 10px;
+        float: left;
+        animation: opacity infinite;
+    }
+
+    /* Main */
+    main {
+        font-size: 0.9em;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 0 20px;
+        row-gap: 10px;
+    }
+
+    /* Entries */
+    article, .entry {
+        display: flex;
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    article {
+        margin-bottom: 20px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.9em;
+    }
+}

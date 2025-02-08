@@ -108,3 +108,25 @@ footer p {
     justify-content: center;
     margin: auto;
 }
+
+/****** RESPONSIVE *****/
+
+@media screen and (max-width: 768px) {
+
+    /* H1 */
+    h1 {
+        line-height: 0.9em;
+        font-size: 4em;
+    }
+
+    /* H2 */
+    h2 {
+        font-size: 1.1em;
+        width: 387px;
+    }
+
+    /* Footer */
+    footer {
+        font-size: 0.9em;
+    }
+}
