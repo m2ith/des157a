@@ -109,7 +109,7 @@ header {
 
     background-color: #FFFBEF;
     border-bottom: 3px solid #E8E3D6;
-    margin-bottom: 65px;
+    margin-bottom: 50px;
     padding: 40px 60px;
 }
 
@@ -223,7 +223,7 @@ footer p {
     /* H2 */
     h2 {
         font-size: 1.1em;
-        width: 387px;
+        max-width: 100%;
     }
 
     /* Header */
@@ -242,21 +242,29 @@ footer p {
     /* Main */
     main {
         font-size: 0.9em;
-        max-width: 90%;
+        width: 90%;
         margin: 0 auto;
         padding: 0 20px;
         row-gap: 10px;
     }
 
-    /* Entries */
-    article, .entry {
+    /* Article */
+    article {
         display: flex;
         flex-direction: column;
         max-width: 90%;
+        margin-bottom: 20px;
     }
 
-    article {
-        margin-bottom: 20px;
+    article h2 {
+        width: 90%;
+        border-radius: 10px;
+        margin-bottom: 5px;
+    }
+
+    /* Entries */
+    .entry {
+        border-radius: 18px;
     }
 
     /* Footer */
