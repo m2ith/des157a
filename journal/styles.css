@@ -130,6 +130,7 @@ main {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
 }
 
 article {
@@ -254,17 +255,12 @@ footer p {
         flex-direction: column;
         max-width: 90%;
         margin-bottom: 20px;
+        box-sizing: border-box;
     }
 
     article h2 {
-        width: 90%;
-        border-radius: 10px;
-        margin-bottom: 5px;
-    }
-
-    /* Entries */
-    .entry {
-        border-radius: 18px;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     /* Footer */
