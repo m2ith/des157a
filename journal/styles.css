@@ -217,7 +217,7 @@ footer p {
     /* H1 */
     h1 {
         line-height: 0.9em;
-        font-size: 4em;
+        font-size: 3em;
     }
 
     /* H2 */
@@ -229,7 +229,7 @@ footer p {
     /* Header */
     header {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
     }
 
