@@ -1,18 +1,18 @@
 /***** RESET *****/
 
 h1, h2, h3, p, ul, ol {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 ul, ol {
-	list-style-type: none;
+    list-style-type: none;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
-	display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /***** TYPOGRAPHY *****/
@@ -75,7 +75,7 @@ a:hover {
 main a:hover {
     color: #d3212a;
 }
-  
+
 a:visited {
     color: inherit;
 }
@@ -110,9 +110,9 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 22em;
     grid-template-rows: 65px;
-    grid-template-areas: 
-    "A A A B"
-    "C C C B";
+    grid-template-areas:
+        "A A A B"
+        "C C C B";
     /* column-gap: 15px; */
     background-color: #FFFBEF;
     border-bottom: 3px solid #E8E3D6;
@@ -159,7 +159,7 @@ h3 {
     text-align: center;
     background-color: #D3212A;
     color: white;
-    border-radius : 8px;
+    border-radius: 8px;
     padding: 12px;
     margin-bottom: 7px;
 }
@@ -209,11 +209,11 @@ footer p {
     62.5% { opacity: .7; }
     75% { opacity: .8; }
     87.5% { opacity: .9; }
-    100% { opacity: 1;} 
+    100% { opacity: 1; }
 }
 
 @keyframes colorchange {
-    0% { color: #3d280a; }
+    0% {color: #3d280a; }
     50% { color: #D3212A; }
     100% { color: #3d280a; }
 }
@@ -245,4 +245,95 @@ footer p {
 @keyframes scroll {
     from { transform: translatex(-100%); }
     to { transform: translatex(100%); }
+}
+
+/****** RESPONSIVE *****/
+
+@media screen and (max-width: 768px) {
+
+    /* Header */
+    header {
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 0.52em;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header img {
+        padding-top: 20px;
+        float: left;
+        animation: opacity infinite;
+    }
+
+    /* Banner */
+    #container {
+        font-size: 0.85em;
+    }
+
+    /* Audio Player */
+    audio {
+        width: 450px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    /* Main */
+    main {
+        font-family: "Fredoka";
+        font-weight: 400;
+        font-size: 0.9em;
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 0 20px;
+        row-gap: 10px;
+    }
+
+    /* Projects */
+    .projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Project Links */
+    .project a {
+        font-size: 0.8em;
+    }
+
+    /* H3 Elements */
+    h3 {
+        font-family: "Fredoka";
+        font-weight: 400;
+        font-size: 1em;
+        text-align: center;
+        background-color: #D3212A;
+        color: white;
+        border-radius: 8px;
+        padding: 12px;
+        margin-bottom: 7px;
+    }
+
+    /* Article Lists */
+    article ul {
+        background-color: #FFFBEF;
+        height: 100%;
+        border: 3px Solid #E8E3D6;
+        border-radius: 18px;
+        padding: 15px 15px 15px 30px;
+    }
+
+    article {
+        margin-bottom: 20px;
+    }
+
+    /* Footer */
+    footer {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 0.9em;
+    }
 }
