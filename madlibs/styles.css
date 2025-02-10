@@ -272,3 +272,20 @@ footer {
     animation: wiggle 1s infinite ease-in-out;
     transition: transform 0.1s;
 }
+
+/****** RESPONSIVE *****/
+
+/* Phone */
+@media screen and (max-width: 480px) {
+
+}
+
+/* Tablet */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+
+}
+
+/* Smaller Desktop */
+@media screen and (min-width: 768px) and (max-width: 1040px) {
+    
+}
