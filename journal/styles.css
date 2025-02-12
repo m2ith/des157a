@@ -298,4 +298,22 @@ footer p {
         flex-direction: column;
         gap: 10px;
     }
+
+    /* Main */
+    main {
+        font-size: 0.9em;
+        width: 90%;
+        margin: 0 auto;
+        padding: 0 20px;
+        row-gap: 10px;
+    }
+
+    /* Article */
+    article {
+        display: flex;
+        flex-direction: column;
+        max-width: 90%;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
 }
