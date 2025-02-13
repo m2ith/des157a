@@ -56,6 +56,10 @@ form {
     font-size: 15px;
 }
 
+input[type=text] {
+    font-size: 1.1em;
+}
+
 button {
     color: white;
     font-size: 18px;
@@ -221,8 +225,8 @@ button {
     border-radius: 10.723px 10.723px 10.726px 10.726px;
     background: #777777;
     border: none;
-    padding: 9px 35px;
-    width: 125px;
+    padding: 12px 15px;
+    width: 180px;
     margin-top: 10px;
     float: right;
 }
