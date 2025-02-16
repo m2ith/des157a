@@ -58,13 +58,17 @@ main {
 }
 
 main p {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 main img {
     height: 70vh;
     margin-left: auto;
     margin-right: auto;
+}
+
+#ipod1, #ipod2, #ipod3 {
+    padding-top: 1.5em;
 }
 
 section {
