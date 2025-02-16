@@ -62,11 +62,16 @@ main p {
 }
 
 button {
-    width: 4em;
-    height: 4em;
+    width: 2.6em;
+    height: 3em;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    background-image: url("../images/play-pause.png");
+    background-image: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: none;
 }
 
 main img {
@@ -95,41 +100,37 @@ figure img {
 	transition: all 3s ease;
 }
 
-.sect1{
-	width: 147vh;
-	top:0;
-	left: 50%;
-	transform:translateX(-50%);
-}
-
-.sect2,
-.sect3 {
-    width: 3768px;
-}
-
-.sect2 {
-    top: 0;
-    left: 0;
-}
-
-.sect3 {
-    top: 0;
-    left: calc(-3768px + 70vw);
-}
-
 /***** BUTTON AND MUSIC STACKING *****/
 
-/* Section 1 */
-.container1 {
+/* Number 1 */
+#container1 {
     position: relative;
-    width: 100%;
-    height: 100%;
 }
 
-.container1 button {
+#container1 button {
     position: absolute;
+    left: 44.5%;
+    top: 78%;
 }
 
-.container1 img {
+/* Number 2 */
+#container2 {
+    position: relative;
+}
+
+#container2 button {
     position: absolute;
+    left: 44.5%;
+    top: 78%;
+}
+
+/* Number 3 */
+#container3 {
+    position: relative;
+}
+
+#container3 button {
+    position: absolute;
+    left: 44.5%;
+    top: 78%;
 }
