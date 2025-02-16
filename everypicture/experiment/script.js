@@ -17,6 +17,8 @@ window.addEventListener("load", function() {
     const button3 = document.querySelector(`#button3`);
     let isPlaying = false;
 
+    const myImage = document.querySelector(`#myimage`);
+
 	sections.forEach(function (eachSection) {
         sectionTops.push(Math.floor(eachSection.getBoundingClientRect().top) + window.scrollY);
     });
@@ -32,7 +34,7 @@ window.addEventListener("load", function() {
         }
 
         if (counter != prevCounter) {
-            onSectionChange();
+            //onSectionChange();
             prevCounter = counter;
         }
     });
@@ -57,24 +59,24 @@ window.addEventListener("load", function() {
         });
     }
 
-    function onSectionChange() {
+    //Trying to get image to change based on section when scrolling
+    /* function onSectionChange() {
         const myPhoto = ["photo01.jpg", "photo02.jpg", "photo03.jpg", "photo04.jpg"];
         let currentImage = 0;
         const nextPhoto = document.querySelector(`#myimage`);
 
-        for (const eachPhoto of sections) {
-            eachPost.className = "offscreen";
-        }
-        document.querySelector(`#section0${counter}`).className = "onscreen";
-    };
+        nextPhoto.src = `images/${myPhoto[currentImage]}`;
+    }; */
 
     button1.addEventListener("click", function(){
         if (!isPlaying) {
             cuijian.play();
             isPlaying = true;
+            myImage.src = "../images/photo02.jpg";
         } else {
             cuijian.pause();
             isPlaying = false;
+            myImage.src = "../images/photo01.jpg";
         }
     });
 
@@ -82,9 +84,11 @@ window.addEventListener("load", function() {
         if (!isPlaying) {
             blackkeys.play();
             isPlaying = true;
+            myImage.src = "../images/photo03.jpg";
         } else {
             blackkeys.pause();
             isPlaying = false;
+            myImage.src = "../images/photo01.jpg";
         }
     });
 
@@ -92,9 +96,11 @@ window.addEventListener("load", function() {
         if (!isPlaying) {
             beatles.play();
             isPlaying = true;
+            myImage.src = "../images/photo04.jpg";
         } else {
             beatles.pause();
             isPlaying = false;
+            myImage.src = "../images/photo01.jpg";
         }
     });
 }); //End
