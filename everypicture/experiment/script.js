@@ -1,6 +1,9 @@
 window.addEventListener("load", function() {
-	const posts = document.querySelectorAll("section");
-	let postTops = [];
+    "ue strict";
+    console.log("reading JS");
+
+	const sections = document.querySelectorAll("section");
+	let sectionTops = [];
 	let pageTop;
 	let counter = 1;
 	let prevCounter = 1;
@@ -14,48 +17,56 @@ window.addEventListener("load", function() {
     const button3 = document.querySelector(`#button3`);
     let isPlaying = false;
 
-	resetPagePosition();
+	sections.forEach(function (eachSection) {
+        sectionTops.push(Math.floor(eachSection.getBoundingClientRect().top) + window.scrollY);
+    });
 
-	window.addEventListener("scroll", function() {
-		pageTop = window.scrollY + 300;
+    window.addEventListener("scroll", function () {
+        pagetop = window.scrollY + 100;
 
-		if (pageTop > postTops[counter]) {
-			counter++;
-			//console.log(`scrolling down ${counter}`);
-		}
-		else if (counter > 1 && pageTop < postTops[counter - 1]) {
-			counter--;
-			//console.log(`scrolling up ${counter}`);
-		}
+        if (pagetop > sectionTops[counter]) {
+            counter++;
+        }
+        else if (counter > 1 && pagetop < sectionTops[counter - 1]) {
+            counter--;
+        }
 
-		if (counter != prevCounter) {
-			document.querySelector(`figure img`).className = "sect" + counter;
-			prevCounter = counter;
-		}
-	});
+        if (counter != prevCounter) {
+            onSectionChange();
+            prevCounter = counter;
+        }
+    });
 
-	window.addEventListener("resize", function() {
-		clearTimeout(doneResizing);
-		doneResizing = setTimeout(function() {
-			resetPagePosition();
-		}, 500);
-	});
+    window.addEventListener("resize", function () {
+        clearTimeout(doneResizing);
+        doneResizing = setTimeout(function () {
+            resetPagePosition();
+        }, 500);
+    });
 
-	function resetPagePosition() {
-		postTops = [];
-		posts.forEach(function(post) {
-			postTops.push(Math.floor(post.getBoundingClientRect().top) + window.scrollY);
-		});
-
-		const pagePosition = window.scrollY + 300;
-		counter = 0;
-
-		postTops.forEach(function(post) { 
-            if (pagePosition > post) { 
-                counter++;
-            }
+    function resetPagePosition() {
+        sectionTops = [];
+        sections.forEach(function (eachSection) {
+            sectionTops.push(Math.floor(eachSection.getBoundingClientRect().top) + window.scrollY);
         });
-	}
+
+        const pagePosition = window.scrollY + sectionTops[0] + 10;
+        counter = 0;
+        sectionTops.forEach(function (eachSection) {
+            if (pagePosition > eachSection) { counter++; }
+        });
+    }
+
+    function onSectionChange() {
+        const myPhoto = ["photo01.jpg", "photo02.jpg", "photo03.jpg", "photo04.jpg"];
+        let currentImage = 0;
+        const nextPhoto = document.querySelector(`#myimage`);
+
+        for (const eachPhoto of sections) {
+            eachPost.className = "offscreen";
+        }
+        document.querySelector(`#section0${counter}`).className = "onscreen";
+    };
 
     button1.addEventListener("click", function(){
         if (!isPlaying) {
@@ -86,4 +97,4 @@ window.addEventListener("load", function() {
             isPlaying = false;
         }
     });
-}); //END
+}); //End
