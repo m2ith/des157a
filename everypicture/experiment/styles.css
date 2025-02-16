@@ -72,18 +72,11 @@ main img {
 }
 
 section {
+    width: 22em;
     height: 100vh;
 }
 
-#section01 {
-    margin-bottom: 40em;
-}
-
-#section02 {
-    margin-bottom: 40em;
-}
-
-#section03 {
+#section1, #section2, #section3 {
     margin-bottom: 40em;
 }
 
@@ -101,4 +94,11 @@ figure {
 figure img {
 	position: absolute;
 	transition: all 3s ease;
+}
+
+#myimage {
+    width: 147vh;
+	top:0;
+	left: 50%;
+	transform: translateX(-50%);
 }
