@@ -17,6 +17,89 @@ img {
 
 /***** TYPOGRAPHY *****/
 
+h1 {
+    font-family: "Fredoka";
+    font-weight: 500;
+    text-transform: uppercase;
+    font-style: normal;
+}
 
+main p {
+    font-family: "Quicksand";
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2em;
+    line-height: 1.2em;
+}
 
 /***** ELEMENTS *****/
+
+h1 {
+    margin: 10px 0;
+}
+
+main {
+    width: 25vw;
+    padding: 20px;
+    margin-left: 15px;
+}
+
+main p {
+    margin-bottom: 25px;
+}
+
+button {
+    width: 4em;
+    height: 4em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main img {
+    height: 70vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section {
+    height: 100vh;
+}
+
+figure {
+	display: block;
+	margin: 0;
+	width: 70vw;
+	height: 100vh;
+	position: fixed;
+	top:0;
+	right:0;
+	overflow: hidden;
+}
+
+figure img {
+	position: absolute;
+	transition: all 3s ease;
+}
+
+.sect1{
+	width: 147vh;
+	top:0;
+	left: 50%;
+	transform:translateX(-50%);
+}
+
+.sect2,
+.sect3 {
+    width: 3768px;
+}
+
+.sect2 {
+    top: 0;
+    left: 0;
+}
+
+.sect3 {
+    top: 0;
+    left: calc(-3768px + 70vw);
+}
