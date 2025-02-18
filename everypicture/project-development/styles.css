@@ -49,7 +49,6 @@ strong {
 
 main {
     font-family: "Fredoka";
-    font-weight: 400;
     color: #3d280a;
     font-size: 1.1em;
 }
@@ -65,6 +64,11 @@ figcaption {
     font-family: "Inter";
     font-weight: 400;
 } */
+
+.entry p {
+    font-family: "Quicksand";
+    font-weight: 500;
+}
 
 footer {
     font-family: "Inter";
