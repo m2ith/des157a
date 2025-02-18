@@ -9,12 +9,12 @@ window.addEventListener("load", function() {
 	let doneResizing;
 
     const cuijian = new Audio("../music/nothingtomyname_cuijian.mp3");
-    const ipod1 = document.querySelector(`#ipod1`);
     const blackkeys = new Audio("../music/goldontheceiling_blackkeys.mp3");
-    const ipod2 = document.querySelector(`#ipod2`);
     const beatles = new Audio("../music/yellowsubmarine_thebeatles.mp3");
+    const ipod1 = document.querySelector(`#ipod1`);
+    const ipod2 = document.querySelector(`#ipod2`);
     const ipod3 = document.querySelector(`#ipod3`);
-    let isPlaying = false;
+    let playingAudio = null;
 
     const myImage = document.querySelector(`#myimage`);
 
@@ -57,39 +57,40 @@ window.addEventListener("load", function() {
         });
 	}
 
-    ipod1.addEventListener("click", function(){
-        if (!isPlaying) {
-            cuijian.play();
-            isPlaying = true;
-            myImage.src = "../images/photo-red.jpg";
-        } else {
-            cuijian.pause();
-            isPlaying = false;
-            myImage.src = "../images/photo-bw.jpg";
-        }
-    });
+    ipod1.addEventListener("click", handleAudioPlay);
+    ipod2.addEventListener("click", handleAudioPlay);
+    ipod3.addEventListener("click", handleAudioPlay);
 
-    ipod2.addEventListener("click", function(){
-        if (!isPlaying) {
-            blackkeys.play();
-            isPlaying = true;
-            myImage.src = "../images/photo-brown.jpg";
-        } else {
-            blackkeys.pause();
-            isPlaying = false;
-            myImage.src = "../images/photo-bw.jpg";
+    function handleAudioPlay(event) {
+        if (playingAudio !== null) {
+            playingAudio.pause();
         }
-    });
 
-    ipod3.addEventListener("click", function(){
-        if (!isPlaying) {
-            beatles.play();
-            isPlaying = true;
-            myImage.src = "../images/photo-yellow.jpg";
-        } else {
-            beatles.pause();
-            isPlaying = false;
-            myImage.src = "../images/photo-bw.jpg";
+        switch(event.target.id) {
+            case "ipod1":
+                if (!cuijian.paused) {
+                    cuijian.pause();
+                }
+                cuijian.play();
+                playingAudio = cuijian;
+                myImage.src = "../images/photo-red.jpg";
+                break;
+            case "ipod2":
+                if (!blackkeys.paused) {
+                    blackkeys.pause();
+                }
+                blackkeys.play();
+                playingAudio = blackkeys;
+                myImage.src = "../images/photo-brown.jpg";
+                break;
+            case "ipod3":
+                if (!beatles.paused) {
+                    beatles.pause();
+                }
+                beatles.play();
+                playingAudio = beatles;
+                myImage.src = "../images/photo-yellow.jpg";
+                break;
         }
-    });
+    }
 });
