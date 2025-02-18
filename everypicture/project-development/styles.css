@@ -229,6 +229,28 @@ footer p {
 
 /****** RESPONSIVE *****/
 
+/* Phone */
+@media screen and (max-width: 480px) {
+
+    h1 {
+        line-height: 0.9em;
+    }
+
+    header {
+        font-size: 0.52em;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header img {
+        padding-top: 10px;
+        float: left;
+        animation: opacity infinite;
+    }
+}
+
+/* Tablet */
 @media screen and (max-width: 768px) {
 
     h1 {
@@ -279,6 +301,7 @@ footer p {
     }
 }
 
+/* Smaller Desktop */
 @media screen and (min-width: 768px) and (max-width: 1040px) {
 
     h1 {
