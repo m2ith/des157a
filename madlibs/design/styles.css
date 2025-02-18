@@ -113,20 +113,17 @@ footer p {
 
 @media screen and (max-width: 768px) {
 
-    /* H1 */
     h1 {
         line-height: 0.9em;
         font-size: 3em;
         text-align: center;
     }
 
-    /* H2 */
     h2 {
         font-size: 1.1em;
         max-width: 100%;
     }
 
-    /* Header */
     header {
         display: flex;
         flex-direction: row;
@@ -139,7 +136,6 @@ footer p {
         animation: opacity infinite;
     }
 
-    /* Main */
     main {
         font-size: 0.9em;
         width: 90%;
@@ -148,7 +144,6 @@ footer p {
         row-gap: 10px;
     }
 
-    /* Article */
     article {
         display: flex;
         flex-direction: column;
@@ -162,7 +157,6 @@ footer p {
         box-sizing: border-box;
     }
 
-    /* Footer */
     footer {
         font-size: 0.9em;
     }
@@ -170,14 +164,12 @@ footer p {
 
 @media screen and (min-width: 768px) and (max-width: 1040px) {
 
-    /* H1 */
     h1 {
         line-height: 0.9em;
         font-size: 4em;
         text-align: center;
     }
 
-    /* Header */
     header {
         display: flex;
         flex-direction: column;

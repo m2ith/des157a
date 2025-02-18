@@ -113,14 +113,12 @@ footer p {
 
 @media screen and (max-width: 768px) {
 
-    /* H1 */
     h1 {
         line-height: 0.9em;
         font-size: 3em;
         text-align: center;
     }
 
-    /* Footer */
     footer {
         font-size: 0.9em;
     }
