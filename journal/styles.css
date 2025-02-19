@@ -63,6 +63,7 @@ figcaption {
 .text-entry {
     font-family: "Quicksand";
     font-weight: 500;
+    line-height: 1.15em;
 }
 
 footer {
@@ -164,7 +165,6 @@ article h2 {
 
 article p {
     padding: 5px;
-    line-height: 1em;
 }
 
 .entry {
