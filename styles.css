@@ -177,6 +177,7 @@ article ul {
     border-width: 3px;
     border-radius: 18px;
     padding: 25px 15px 15px 30px;
+    line-height: 1.18em;
 
     /* display: flex;
     flex-direction: column;
