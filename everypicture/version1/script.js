@@ -57,11 +57,11 @@ window.addEventListener("load", function() {
         });
 	}
 
-    ipod1.addEventListener("click", handleAudioPlay);
-    ipod2.addEventListener("click", handleAudioPlay);
-    ipod3.addEventListener("click", handleAudioPlay);
+    ipod1.addEventListener("click", handleAudio);
+    ipod2.addEventListener("click", handleAudio);
+    ipod3.addEventListener("click", handleAudio);
 
-    function handleAudioPlay(event) {
+    function handleAudio(event) {
         if (playingAudio !== null) {
             playingAudio.pause();
         }

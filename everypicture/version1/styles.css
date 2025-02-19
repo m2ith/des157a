@@ -1,5 +1,9 @@
 /***** RESET *****/
 
+* {
+    box-sizing: border-box;
+}
+
 h1, h2, h3, p, ul, ol {
     margin: 0;
     padding: 0;
@@ -41,20 +45,26 @@ main p {
     line-height: 1.2em;
 }
 
+em {
+    font-style: normal;
+    color: grey;
+}
+
 /***** ELEMENTS *****/
 
 h1 {
     margin: 20px 0;
+    line-height: 1em;
 }
 
 h2 {
     margin: 10px 0;
+    line-height: 1em;
 }
 
 main {
-    width: 25vw;
+    width: 30vw;
     padding: 20px;
-    margin-left: 15px;
 }
 
 main p {
@@ -72,6 +82,7 @@ main img {
 }
 
 section {
+    margin-left: 15px;
     width: 22em;
     height: 100vh;
 }
@@ -88,7 +99,7 @@ figure {
 	position: fixed;
 	top: 0;
 	right: 0;
-	overflow: hidden;
+    overflow: hidden;
 }
 
 figure img {
@@ -101,4 +112,8 @@ figure img {
 	top:0;
 	left: 50%;
 	transform: translateX(-50%);
+}
+
+.spacer {
+    padding: 15px;
 }
