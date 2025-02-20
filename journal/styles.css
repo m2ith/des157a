@@ -148,7 +148,7 @@ main {
 }
 
 article {
-    width: 750px;
+    width: 100%;
     align-items: center;
     justify-content: center;
     margin: auto;
@@ -299,6 +299,12 @@ footer p {
         gap: 10px;
     }
 
+    header img {
+        padding-top: 10px;
+        float: left;
+        animation: opacity infinite;
+    }
+
     main {
         font-size: 0.9em;
         width: 90%;
@@ -312,6 +318,11 @@ footer p {
         flex-direction: column;
         max-width: 90%;
         margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+
+    article h2 {
+        width: 100%;
         box-sizing: border-box;
     }
 }
