@@ -57,40 +57,42 @@ window.addEventListener("load", function() {
         });
 	}
 
-    ipod1.addEventListener("click", handleAudio);
-    ipod2.addEventListener("click", handleAudio);
-    ipod3.addEventListener("click", handleAudio);
-
-    function handleAudio(event) {
-        if (playingAudio !== null) {
-            playingAudio.pause();
+    ipod1.addEventListener("click", function(){
+        if (playingAudio = cuijian) {
+            cuijian.play();
+            playingAudio = cuijian;
+            !blackkeys.paused == blackkeys.pause();
+            !beatles.paused == beatles.pause();
+            myImage.src = "../images/photo-red.jpg";
+        } else {
+            cuijian.pause();
+            myImage.src = "../images/photo-bw.jpg";
         }
+    });
 
-        switch(event.target.id) {
-            case "ipod1":
-                if (!cuijian.paused) {
-                    cuijian.pause();
-                }
-                cuijian.play();
-                playingAudio = cuijian;
-                myImage.src = "../images/photo-red.jpg";
-                break;
-            case "ipod2":
-                if (!blackkeys.paused) {
-                    blackkeys.pause();
-                }
-                blackkeys.play();
-                playingAudio = blackkeys;
-                myImage.src = "../images/photo-brown.jpg";
-                break;
-            case "ipod3":
-                if (!beatles.paused) {
-                    beatles.pause();
-                }
-                beatles.play();
-                playingAudio = beatles;
-                myImage.src = "../images/photo-yellow.jpg";
-                break;
+    ipod2.addEventListener("click", function(){
+        if (playingAudio = blackkeys) {
+            blackkeys.play();
+            playingAudio = blackkeys;
+            !cuijian.paused == cuijian.pause();
+            !beatles.paused == beatles.pause();
+            myImage.src = "../images/photo-brown.jpg";
+        } else {
+            blackkeys.pause();
+            myImage.src = "../images/photo-bw.jpg";
         }
-    }
+    });
+
+    ipod3.addEventListener("click", function(){
+        if (playingAudio = beatles) {
+            beatles.play();
+            playingAudio = beatles;
+            !cuijian.paused == cuijian.pause();
+            !blackkeys.paused == blackkeys.pause();
+            myImage.src = "../images/photo-yellow.jpg";
+        } else {
+            beatles.pause();
+            myImage.src = "../images/photo-bw.jpg";
+        }
+    });
 });
