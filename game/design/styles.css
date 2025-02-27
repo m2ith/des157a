@@ -36,6 +36,39 @@ h2 {
     color: #3d280a;
 }
 
+h3 {
+    font-weight: 500;
+    font-size: 1.4em;
+    color: #d3212a;
+}
+
+strong {
+    font-weight: 600;
+}
+
+main {
+    font-family: "Fredoka";
+    color: #3d280a;
+    font-size: 1.1em;
+}
+
+figcaption {
+    color: gray;
+    font-size: 0.85em;
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* .text-entry {
+    font-family: "Inter";
+    font-weight: 400;
+} */
+
+.entry p {
+    font-family: "Quicksand";
+    font-weight: 500;
+}
+
 footer {
     font-family: "Inter";
     font-weight: 400;
@@ -47,6 +80,11 @@ footer {
 a:link {
     text-decoration: none;
     color: #3d280a;
+}
+
+article a:link, article a:visited {
+    text-decoration: none;
+    color: #d3212a;
 }
 
 a:hover {
@@ -75,21 +113,43 @@ body {
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 22em;
+    grid-template-rows: 65px;
+    grid-template-areas:
+        "A A A B"
+        "C C C B";
+    /* column-gap: 15px; */
     background-color: #FFFBEF;
     border-bottom: 3px solid #E8E3D6;
-    margin-bottom: 50px;
+    margin-bottom: 52px;
     padding: 40px 60px;
 }
 
-img {
+h1 {
+    grid-area: A;
+}
+
+h2 {
+    grid-area: C;
+}
+
+header img {
+    animation: opacity 4s;
+    animation-iteration-count: infinite;
+
+    float: right;
+    grid-area: B;
+    padding-top: 10px;
+}
+
+main img {
     display: block;
     margin: auto;
-    width: 90%;
+    width: 1000px;
+    padding: 15px;
+    box-sizing: border-box;
 }
 
 footer {
@@ -109,25 +169,37 @@ footer p {
     margin: auto;
 }
 
+.spacer {
+    padding: 15px;
+}
+
+/****** ANIMATION *****/
+
+@keyframes opacity {
+    0% { opacity: 1; }
+    12.5% { opacity: .9; }
+    25% { opacity: .8; }
+    37.5% { opacity: .7; }
+    50% { opacity: .6; }
+    62.5% { opacity: .7; }
+    75% { opacity: .8; }
+    87.5% { opacity: .9; }
+    100% { opacity: 1;} 
+}
+
 /****** RESPONSIVE *****/
 
-/* Tablet */
-@media screen and (max-width: 768px) {
+/* Phone */
+@media screen and (max-width: 480px) {
 
     h1 {
         line-height: 0.9em;
-        font-size: 3em;
-        text-align: center;
-    }
-
-    h2 {
-        font-size: 1.1em;
-        max-width: 100%;
     }
 
     header {
+        font-size: 0.52em;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 10px;
     }
 
@@ -136,26 +208,27 @@ footer p {
         float: left;
         animation: opacity infinite;
     }
+}
 
-    main {
-        font-size: 0.9em;
-        width: 90%;
-        margin: 0 auto;
-        padding: 0 20px;
-        row-gap: 10px;
+/* Tablet */
+@media screen and (max-width: 768px) {
+
+    h1 {
+        line-height: 0.9em;
+        font-size: 4em;
     }
 
-    article {
+    header {
+        font-size: 0.65em;
         display: flex;
         flex-direction: column;
-        max-width: 90%;
-        margin-bottom: 20px;
-        box-sizing: border-box;
+        gap: 10px;
     }
 
-    article h2 {
-        width: 100%;
-        box-sizing: border-box;
+    header img {
+        padding-top: 10px;
+        float: left;
+        animation: opacity infinite;
     }
 
     footer {
@@ -168,8 +241,6 @@ footer p {
 
     h1 {
         line-height: 0.9em;
-        font-size: 4em;
-        text-align: center;
     }
 
     header {
