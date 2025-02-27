@@ -197,6 +197,10 @@ figcaption {
     padding-bottom: 6px;
 }
 
+ul, ol {
+    padding: 5px;
+}
+
 footer {
     display: flex;
     bottom: 0;
