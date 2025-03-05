@@ -1,0 +1,141 @@
+/***** RESET *****/
+
+h1, h2, h3, p, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/***** START PAGE TYPOGRAPHY *****/
+
+h1 {
+    font-family: "Press Start 2P";
+    font-weight: 400;  
+    -webkit-text-stroke-width: 12px;
+    -webkit-text-stroke-color: #D3212A;
+    paint-order: stroke fill;
+    color: white;
+    font-size: 200px;
+    text-transform: uppercase;
+    line-height: normal;
+}
+
+#start {
+    font-family: "Press Start 2P";
+    font-weight: 400;  
+    text-transform: uppercase;
+    color: white;
+    font-size: 29.867px;
+    border: none;
+    /* border: solid 2.5px; */
+}
+
+#start-message {
+    color: white;
+    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-color: #417A48;
+    font-family: "Press Start 2P";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    paint-order: stroke fill;
+}
+
+/***** INDEX TYPOGRAPHY *****/
+
+h2 {
+    font-size: 1.1em;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #D3212A;
+}
+
+body {
+    font-family: "Press Start 2P";
+    font-weight: 400;
+    color: white;
+}
+
+/***** START PAGE ELEMENTS *****/
+
+#home {
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+#background {
+    position: relative;
+    width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+#title-name {
+    position: absolute;
+    /* display: block;
+    margin: 0 auto; */
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    animation: opacity 4s;
+    animation-iteration-count: infinite;
+}
+
+#start-message {
+    position: absolute;
+    top: 82%;
+    left: 23%;
+    /* transform: translate(-50%, -50%); */
+    overflow: hidden;
+    width: fit-content;
+    margin: 0 auto;
+    white-space: nowrap;
+    animation: typing 4s steps(20);
+}
+
+#start {
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 228px;
+    height: 69.047px;
+    border-radius: 14.385px;
+    background: #D3212A;
+    display: block;
+    margin: auto;
+}
+
+@keyframes opacity {
+    0% { opacity: 1; }
+    12.5% { opacity: .95; }
+    25% { opacity: .9; }
+    37.5% { opacity: .85; }
+    50% { opacity: .8; }
+    62.5% { opacity: .85; }
+    75% { opacity: .9; }
+    87.5% { opacity: .95; }
+    100% { opacity: 1; }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/***** INDEX ELEMENTS *****/
+
+body {
+    background: #5AAD63;
+}
