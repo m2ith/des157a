@@ -123,8 +123,8 @@ body {
 
 #start-message {
     position: absolute;
-    top: 82%;
-    left: 25%;
+    top: 628px;
+    left: 355px;
     /* transform: translate(-50%, -50%); */
     overflow: hidden;
     width: fit-content;
