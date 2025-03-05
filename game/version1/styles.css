@@ -34,7 +34,7 @@ h1 {
     font-weight: 400;  
     text-transform: uppercase;
     color: white;
-    font-size: 29.867px;
+    font-size: 22px;
     border: none;
     /* border: solid 2.5px; */
 }
@@ -44,7 +44,7 @@ h1 {
     -webkit-text-stroke-width: 5px;
     -webkit-text-stroke-color: #417A48;
     font-family: "Press Start 2P";
-    font-size: 22px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -75,7 +75,9 @@ body {
 
 #background {
     position: relative;
-    width: 100%;
+    display: block;
+    margin: auto;
+    width: 75%;
     object-fit: cover;
     overflow: hidden;
 }
@@ -87,7 +89,7 @@ body {
     top: 36%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 70%;
+    width: 50%;
     animation: opacity 4s;
     animation-iteration-count: infinite;
 }
@@ -95,9 +97,8 @@ body {
 #start-message {
     position: absolute;
     top: 82%;
-    left: 50%;
-    /* The transform makes the text move to the left, FIX LATER */
-    transform: translate(-50%, -50%);
+    left: 24%;
+    /* transform: translate(-50%, -50%); */
     overflow: hidden;
     width: fit-content;
     margin: 0 auto;
@@ -110,12 +111,18 @@ body {
     top: 92%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 228px;
-    height: 69.047px;
+    width: 205px;
+    height: 60px;
     border-radius: 14.385px;
     background: #D3212A;
     display: block;
     margin: auto;
+}
+
+#start a {
+    padding-left: 5px;
+    text-decoration: none;
+    color: inherit;
 }
 
 @keyframes opacity {
@@ -138,5 +145,5 @@ body {
 /***** INDEX ELEMENTS *****/
 
 body {
-    background: #5AAD63;
+    background: white;
 }
