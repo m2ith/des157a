@@ -227,3 +227,7 @@ body {
 #messages p {
     flex: 0 0;
 }
+
+#start:hover, #quit:hover, #volume:hover, #attack:hover {
+    border: 4px solid #811016;
+}
