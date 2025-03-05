@@ -95,8 +95,9 @@ body {
 #start-message {
     position: absolute;
     top: 82%;
-    left: 23%;
-    /* transform: translate(-50%, -50%); */
+    left: 50%;
+    /* The transform makes the text move to the left, FIX LATER */
+    transform: translate(-50%, -50%);
     overflow: hidden;
     width: fit-content;
     margin: 0 auto;
