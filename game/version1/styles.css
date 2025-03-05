@@ -53,17 +53,21 @@ h1 {
 
 /***** INDEX TYPOGRAPHY *****/
 
-h2 {
-    font-size: 1.1em;
+body {
+    font-family: "Press Start 2P";
+    font-weight: 400;
+    color: white;
+}
+
+.name h2 {
+    font-size: 0.75em;
     -webkit-text-stroke-width: 7px;
     -webkit-text-stroke-color: #D3212A;
     paint-order: stroke fill;
 }
 
-body {
-    font-family: "Press Start 2P";
-    font-weight: 400;
-    color: white;
+.health {
+    font-size: 0.75em;
 }
 
 #attack {
@@ -77,7 +81,15 @@ body {
 }
 
 #messages p {
+    font-size: 0.85em;
     color: black;
+}
+
+.health {
+    color: white;
+    -webkit-text-stroke-width: 7px;
+    -webkit-text-stroke-color: black;
+    paint-order: stroke fill;
 }
 
 /***** START PAGE ELEMENTS *****/
@@ -145,8 +157,8 @@ body {
     border-radius: 9px;
     border: none;
     position: absolute;
-    top: 4.8%;
-    left: 81%;
+    top: 50px;
+    left: 1150px;
 }
 
 #volume img {
@@ -178,14 +190,14 @@ body {
 
 #keva {
     position: absolute;
-    top: 35%;
-    left: 30%;
+    top: 225px;
+    left: 480px;
 }
 
 #whispurr {
     position: absolute;
-    top: 15%;
-    left: 54%;
+    top: 120px;
+    left: 780px;
 }
 
 #attack {
@@ -203,17 +215,18 @@ body {
     background-color: #D3212A;
     border: none;
     width: 90px;
-    height: 35px;
+    height: 40px;
     /* padding: 12px; */
     border-radius: 9px;
     position: absolute;
-    top: 4.8%;
-    left: 15.4%;
+    top: 50px;
+    left: 238px;
+    padding-top: 2px;
 }
 
 #messages {
-    width: 450px;
-    height: 140px;
+    width: 440px;
+    height: 130px;
     border-radius: 20px;
     border: 5px solid #D3212A;
     background: white;
@@ -229,5 +242,82 @@ body {
 }
 
 #start:hover, #quit:hover, #volume:hover, #attack:hover {
+    border: 4px solid white;
+}
+
+#start, #quit, #volume, #attack {
     border: 4px solid #811016;
+}
+
+.name-display {
+    width: 240px;
+    height: 90px;
+    position: absolute;
+    background-color: white;
+    border-radius: 14px;
+    padding: 0 20px;
+    align-content: center;
+}
+
+#k-name {
+    top: 440px;
+    left: 250px;
+}
+
+#w-name {
+    top: 350px;
+    left: 900px;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.health {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#healthbar0, #healthbar1 {
+    width: 75%;
+    height: 20px;
+    border: 3px solid #2C8035;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+
+#healthbar0 div, #healthbar1 div{
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #56C763;
+    border-radius: 9px;
+}
+
+#action {
+    display: grid;
+    grid-template-areas: 
+        "A B";
+        gap: 20px;
+    align-items: center;
+    width: 50%;
+    position: absolute;
+    top: 604px;
+    left: 350px;
+}
+
+#messages {
+    grid-area: A;
+}
+
+#attack {
+    grid-area: B;
 }
