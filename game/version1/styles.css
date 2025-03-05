@@ -41,7 +41,7 @@ h1 {
 
 #start-message {
     color: white;
-    -webkit-text-stroke-width: 5px;
+    -webkit-text-stroke-width: 7px;
     -webkit-text-stroke-color: #417A48;
     font-family: "Press Start 2P";
     font-size: 20px;
@@ -55,14 +55,29 @@ h1 {
 
 h2 {
     font-size: 1.1em;
-    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-width: 7px;
     -webkit-text-stroke-color: #D3212A;
+    paint-order: stroke fill;
 }
 
 body {
     font-family: "Press Start 2P";
     font-weight: 400;
     color: white;
+}
+
+#attack {
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+#quit {
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+#messages p {
+    color: black;
 }
 
 /***** START PAGE ELEMENTS *****/
@@ -97,7 +112,7 @@ body {
 #start-message {
     position: absolute;
     top: 82%;
-    left: 24%;
+    left: 25%;
     /* transform: translate(-50%, -50%); */
     overflow: hidden;
     width: fit-content;
@@ -120,9 +135,22 @@ body {
 }
 
 #start a {
-    padding-left: 5px;
+    padding-left: 8px;
     text-decoration: none;
     color: inherit;
+}
+
+#volume {
+    background-color: #D3212A;
+    border-radius: 9px;
+    border: none;
+    position: absolute;
+    top: 4.8%;
+    left: 81%;
+}
+
+#volume img {
+    padding: 7px;
 }
 
 @keyframes opacity {
@@ -146,4 +174,56 @@ body {
 
 body {
     background: white;
+}
+
+#keva {
+    position: absolute;
+    top: 35%;
+    left: 30%;
+}
+
+#whispurr {
+    position: absolute;
+    top: 15%;
+    left: 54%;
+}
+
+#attack {
+    color: white;
+    background-color: #D3212A;
+    border: none;
+    width: 205px;
+    height: 60px;
+    /* padding: 12px; */
+    border-radius: 9px;
+}
+
+#quit {
+    color: white;
+    background-color: #D3212A;
+    border: none;
+    width: 90px;
+    height: 35px;
+    /* padding: 12px; */
+    border-radius: 9px;
+    position: absolute;
+    top: 4.8%;
+    left: 15.4%;
+}
+
+#messages {
+    width: 450px;
+    height: 140px;
+    border-radius: 20px;
+    border: 5px solid #D3212A;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 25px;
+}
+
+#messages p {
+    flex: 0 0;
 }

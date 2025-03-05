@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game On: Cat Fight</title>
 
@@ -19,12 +20,40 @@
 <body>
     <div id="home">
         <img src="../images/background.png" alt="background" id="background">
-        <img src="../images/title-name.png" alt="title name" id="title-name">
-
-        <p id="start-message">The player will be randomly selected.</p>
-        <button id="start"><a href="index.html">Start</a>></button>
 
         <button id="volume"><img src="../images/volume-on.png" alt="volume"></button>
     </div>
+
+    <section id="game">
+        <div>
+            <img src="../images/my-cats/k-neutral1.png" alt="keva neutral" id="keva">
+            <h2>Keva</h2>
+
+            <div class="health">
+                <div id="healthbar0"><div></div></div><p id="health0">100%</p>
+            </div>
+        </div>
+        <div>
+            <img src="../images/my-cats/w-neutral1.png" alt="whispurr neutral" id="whispurr">
+
+            <h2>Whispurr</h2>
+            <div class="health">
+                <div id="healthbar1"><div></div></div><p id="health1">100%</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="action">
+        <div id="messages">
+            <p>Get ready! Keva was randomly selected to attack first.</p>
+            <p>Click the attack button to see what happens.</p>
+        </div>
+
+        <button id="attack" class="hidden">Attack</button>
+    </section>
+
+    <section id="controls">
+        <button id="quit">Quit</button>
+    </section>
 </body>
 </html>
