@@ -10,10 +10,11 @@
     const attackBtn = document.querySelector(`#attack`);
     const quitBtn = document.querySelector(`#quit`);
 
-    /* These variables are assigned later and used to keep track of
-    the state of the game. Attacker and defender will end up just being
-    the name of the monster for the person who is attacking and the person who
-    is defending. DefenderIndex will be 0 or 1, whichever player is not attacking. */
+    document.querySelector(`#quit`).addEventListener("click", function(){
+        window.location.href = "start.html";
+    });
+
+    /* These variables are assigned later and used to keep track of the state of the game. Attacker and defender will end up just being the name of the monster for the person who is attacking and the person who is defending. DefenderIndex will be 0 or 1, whichever player is not attacking. */
     let attacker;
     let defender;
     let defenderIndex;
@@ -23,24 +24,21 @@
 		health: [100, 100],
 		attack: [5, 15, 25, 35, 50],
         attackMessage: [
-            "A very weak attack... -5 HP!",
-            "A weak attack... -15 HP!",
-            "An attack of -25 HP!",
-            "A big attack! -35 HP!",
-            "A massive attack! Woah! -50 HP!"
+            "a very weak attack... -5 HP!",
+            "a weak attack... -15 HP!",
+            "an attack of -25 HP!",
+            "a big attack! -35 HP!",
+            "a massive attack! Woah! -50 HP!"
         ],
 		defendMessage: [
-            "No defense... HP was highly affected!", 
-            "Some defense! Partial hit!", 
-            "Total defense! HP was not affected!"
+            "no defense... HP was highly affected!", 
+            "some defense! Partial hit!", 
+            "total defense! HP was not affected!"
         ],
 		index: 0
 	};
-
-    /* this kicks off the game. Note the attack button starts as hidden, and then is
-    only shown at times when the player can attack. I don't want to remove the
-    button entirely, as that would require adding the event listener back every time
-    the button gets put back on the page. */
+2
+    /* This kicks off the game. Note the attack button starts as hidden, and then is only shown at times when the player can attack. I don't want to remove the button entirely, as that would require adding the event listener back every time the button gets put back on the page. */
 
     startBtn.addEventListener("click", function(){
         gameData.index = Math.round(Math.random());
@@ -51,13 +49,11 @@
     /* Now that the button is showing, the player can attack */
     attackBtn.addEventListener("click", catAttack);
 
-    /* this is where most of the action takes place */
+    /* This is where most of the action takes place */
     function catAttack(){
         
-        /* If gameData.index is 1, the statement is true and it must
-        be ployer 2's turn. Set the attacker to player 2 and the defender to player 1.
-        Set the defenderIndex to zero. If this statement is false, do the opposite. */
-        if(gameData.index){
+        /* If gameData.index is 1, the statement is true and it must be ployer 2's turn. Set the attacker to player 2 and the defender to player 1. Set the defenderIndex to zero. If this statement is false, do the opposite. */
+        if(gameData.index) {
             attacker = gameData.cats[1];
             defender = gameData.cats[0];
             defenderIndex = 0;
@@ -72,25 +68,27 @@
         const thisAttack = Math.floor(Math.random() * 5);
         const thisdDefense = Math.floor(Math.random() * 3);
 
-        // hide the attack button again, until the next turn.
+        //hide the attack button again, until the next turn
         attackBtn.className = "hidden";
 
         //put the correct attack class on the attacking monster
-        document.querySelector(`#${attacker}`).className = `attack${thisAttack}`;
-        // put the correct message in the message window
+        if(document.querySelector(`#${attacker}`)) {
+            document.querySelector(`#${attacker}`).className = `attack${thisAttack}`;
+        } else {
+            console.error(`Element with ID ${attacker} not found`);
+        }
+
+        //put the correct message in the message window
         messages.innerHTML = `<p><strong>${attacker}</strong> has completed ${gameData.attackMessage[thisAttack]}</p>`;
 
-        /* wait 2.5 seconds so the CSS attacking animation can finish and the user can
-        read the attack message*/
+        /* wait 2.5 seconds so the CSS attacking animation can finish and the user can read the attack message*/
         setTimeout(function(){
-            // update the messages div with a defense message.
+            // update the messages div with a defense message
             messages.innerHTML = `<p><strong>${defender}</strong> has ${gameData.defendMessage[thisdDefense]}</p>`;
             // put the correct defense animation on the defending monster
             document.querySelector(`#${defender}`).className = `defend${thisdDefense}`;
 
-            /* If there is no defense, update the healthbar of the defending monster by subtracting
-            total attack from it's current health. If there was partial defense subtract half the
-            health. If a 2 was rolled, nothing happens to the healthbar, because it was total defense. */
+            /* If there is no defense, update the healthbar of the defending monster by subtracting total attack from it's current health. If there was partial defense subtract half the health. If a 2 was rolled, nothing happens to the healthbar, because it was total defense. */
             if( thisdDefense == 0){
                 gameData.health[defenderIndex] = gameData.health[defenderIndex] - gameData.attack[thisAttack];
             } else if( thisdDefense == 1 ){
@@ -118,10 +116,15 @@
         //Wait three seconds, so users can read the screen and the animation can finish.
         setTimeout(function(){
             //Remove the animation classes from the monsters...
-            cat1.removeAttribute("class");
-            cat2.removeAttribute("class");
-            /* As before, we need to make sure the health of the defending
-            monster is converted into a number and rounded down. */
+            // cat1.removeAttribute("class");
+            // cat2.removeAttribute("class");
+            if (cat1 && cat1.nodeType === Node.ELEMENT_NODE) {
+                cat1.removeAttribute("class");
+            }
+            if (cat2 && cat2.nodeType === Node.ELEMENT_NODE) {
+                cat2.removeAttribute("class");
+            }
+            /* As before, we need to make sure the health of the defending monster is converted into a number and rounded down. */
             const health = Math.floor(parseFloat(gameData.health[enemy]));
             // If the health is less than 1, the winning condition has been met for the attacking monster
             if( health < 1 ){

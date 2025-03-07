@@ -211,19 +211,32 @@ body {
     background: white;
 }
 
-#keva {
+#Keva {
     position: absolute;
     top: 35%;
-    left: 30%;
+    left: 34%;
 }
 
-#whispurr {
+#Whispurr {
     position: absolute;
     top: 15%;
     left: 54%;
 }
 
 #attack {
+    color: white;
+    background-color: #D3212A;
+    border: none;
+    width: 205px;
+    height: 60px;
+    /* padding: 12px; */
+    border-radius: 9px;
+}
+
+#reset {
+    position: absolute;
+    top: 30%;
+    left: 72%;
     color: white;
     background-color: #D3212A;
     border: none;
@@ -278,10 +291,6 @@ body {
 }
 
 #spawn-message {
-    position: absolute;
-    top: 50px;
-    left: 42px;
-    /* transform: translate(-50%, -50%); */
     overflow: hidden;
     width: fit-content;
     margin: 0 auto;
@@ -289,11 +298,11 @@ body {
     animation: typing 4s steps(20);
 }
 
-#start:hover,#lets-see:hover, #quit:hover, #volume:hover, #attack:hover {
+#start:hover,#lets-see:hover, #quit:hover, #volume:hover, #attack:hover, #reset:hover {
     border: 4px solid white;
 }
 
-#start, #lets-see, #quit, #volume, #attack {
+#start, #lets-see, #quit, #volume, #attack, #reset {
     border: 4px solid #811016;
 }
 
