@@ -38,7 +38,7 @@
 
     //INFO OVERLAY
     // THIS IS NOT WORKING, NEED TO FIX
-    infoBtn.addEventListener("click", function(event){
+    /* infoBtn.addEventListener("click", function(event){
         event.preventDefault();
         document.querySelector(`#overlay`).className = "showing-overlay";
     });
@@ -52,7 +52,7 @@
         if (event.key == `Escape`) {
             document.querySelector(`#overlay`).className = "hidden";
         }
-    });
+    }); */
 
     //GAME INFORMATION
     /* These variables are assigned later and used to keep track of the state of the game. Attacker and defender will end up just being the name of the monster for the person who is attacking and the person who is defending. DefenderIndex will be 0 or 1, whichever player is not attacking. */
