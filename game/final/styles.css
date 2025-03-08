@@ -139,9 +139,9 @@ strong {
 #title-name {
     position: absolute;
     /* display: block;
-    margin: auto; */
-    top: 300px;
-    left: 715px;
+    margin: 0 auto; */
+    top: 37%;
+    left: 50%;
     transform: translate(-50%, -50%);
     width: 50%;
     animation: opacity 4s;
@@ -193,7 +193,7 @@ strong {
     padding-top: 2px;
 }
 
-#volume {
+.volume {
     background-color: #D3212A;
     border-radius: 9px;
     border: none;
@@ -202,7 +202,7 @@ strong {
     left: 81%;
 }
 
-#volume img {
+.volume img {
     padding: 7px;
 }
 
@@ -367,11 +367,11 @@ body {
     animation: typing 4s steps(20);
 }
 
-#start:hover,#lets-see:hover, #quit:hover, #volume:hover, #attack:hover, #reset:hover, #info:hover, .close:hover {
+#start:hover,#lets-see:hover, #quit:hover, .volume:hover, #attack:hover, #reset:hover, #info:hover, .close:hover {
     border: 4px solid white;
 }
 
-#start, #lets-see, #quit, #volume, #attack, #reset, #info, .close {
+#start, #lets-see, #quit, .volume, #attack, #reset, #info, .close {
     border: 4px solid #811016;
 }
 

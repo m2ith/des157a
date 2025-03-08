@@ -9,30 +9,49 @@
     const startBtn = document.querySelector(`#lets-see`);
     const attackBtn = document.querySelector(`#attack`);
     const quitBtn = document.querySelector(`#quit`);
-    const volumeBtn = document.querySelector(`#volume`);
+    const volumeBtn = document.querySelector(`.volume`);
+    const volumeImg = document.querySelector(`.volume-img`);
     const infoBtn = document.querySelector(`#info`);
     const overlayCloseBtn = document.querySelector(`.close`);
 
     //GAME AUDIO
-    //const cuijian = new Audio("../music/nothingtomyname_cuijian.mp3");
     const gameAudio = new Audio("music/underclocked-ericskiff.mp3");
     let isGameAudioPlaying = false;
     gameAudio.loop = true;
 
-    volume.addEventListener("click", function() {
-        if (!isGameAudioPlaying) {
-            gameAudio.play();
-            isGameAudioPlaying = true;
-            volumeBtn.src = "../images/volume-on.png"
-        } else {
-            gameAudio.pause();
-            isGameAudioPlaying = false;
-            volumeBtn.src = "../images/volume-off.png";
-        }
+    document.addEventListener('DOMContentLoaded', function() {
+        //console.log("DOM fully loaded and parsed");
+        // Add a small delay before executing the volume control logic
+        setTimeout(function() {
+            volumeBtn.addEventListener("click", function() {
+                //console.log("Volume button clicked");
+                if (!isGameAudioPlaying) {
+                    console.log("Playing audio");
+                    gameAudio.play();
+                    isGameAudioPlaying = true;
+                    if (volumeImg) {
+                        volumeImg.src = "../images/volume-on.png";
+                        console.log("Changed volume image");
+                    } else {
+                        console.error("volumeImg is null");
+                    }
+                } else {
+                    console.log("Pausing audio");
+                    gameAudio.pause();
+                    isGameAudioPlaying = false;
+                    if (volumeImg) {
+                        volumeImg.src = "../images/volume-off.png";
+                        console.log("Changed volume image");
+                    } else {
+                        console.error("volumeImg is null");
+                    }
+                }
+            });
+        }, 500); // 500ms delay
     });
 
     //QUIT BUTTON
-    document.querySelector(`#quit`).addEventListener("click", function(){
+    quitBtn.addEventListener("click", function(){
         window.location.href = "start.html";
     });
 
