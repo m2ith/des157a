@@ -80,6 +80,10 @@ body {
     text-transform: uppercase;
 }
 
+#info {
+    font-size: 0.9em;
+}
+
 #messages p {
     font-size: 0.85em;
     color: black;
@@ -147,7 +151,7 @@ strong {
 #start-message {
     position: absolute;
     top: 81.5%;
-    left: 25%;
+    left: 23%;
     /* transform: translate(-50%, -50%); */
     overflow: hidden;
     width: fit-content;
@@ -173,6 +177,20 @@ strong {
     padding-left: 8px;
     text-decoration: none;
     color: inherit;
+}
+
+#info {
+    color: white;
+    background-color: #D3212A;
+    border: none;
+    width: 50px;
+    height: 40px;
+    /* padding: 12px; */
+    border-radius: 9px;
+    position: absolute;
+    top: 4.8%;
+    left: 15.4%;
+    padding-top: 2px;
 }
 
 #volume {
@@ -298,11 +316,11 @@ body {
     animation: typing 4s steps(20);
 }
 
-#start:hover,#lets-see:hover, #quit:hover, #volume:hover, #attack:hover, #reset:hover {
+#start:hover,#lets-see:hover, #quit:hover, #volume:hover, #attack:hover, #reset:hover, #info:hover {
     border: 4px solid white;
 }
 
-#start, #lets-see, #quit, #volume, #attack, #reset {
+#start, #lets-see, #quit, #volume, #attack, #reset, #info {
     border: 4px solid #811016;
 }
 
@@ -414,66 +432,83 @@ body {
 }
 
 .defend2 {
-    animation: gobackward 2s ease-in-out 1;
+    animation: totaldefense 2s ease-in-out 1;
 }
 
 .defend0 {
-    animation: shake 1s ease-in-out 2;
+    animation: nodefense 1s ease-in-out 2;
 }
 
 .defend1{
-    animation: spin 1s ease-in-out 2;
+    animation: somedefense 1s ease-in-out 2;
 }
 
+/* -5 HP */
 @keyframes veryweak {
-    0% {transform: scale(1);}
-    50% {transform: scale(1.1);} 
-    100% {transform: scale(1);}
+    0% { transform: translate(0); }
+    20% { transform: translate(2px, -2px); }
+    40% { transform: translate(2px, 2px); }
+    60% { transform: translate(-2px, 2px); }
+    80% { transform: translate(-2px, -2px); }
+    100% { transform: translate(0); }
 }
 
+/* -15 HP */
 @keyframes weak {
-    0% {transform: scale(1);}
-    50% {transform: scale(1.3);} 
-    100% {transform: scale(1);}
+    0% { transform: scale(1); }
+    10% { transform: scale(1.1) rotate(-5deg); }
+    20% { transform: scale(1.1) rotate(5deg); }
+    30% { transform: scale(1.1) rotate(-5deg); }
+    40% { transform: scale(1.1) rotate(5deg); }
+    50% { transform: scale(1.1) rotate(-5deg); }
+    60% { transform: scale(1.1) rotate(5deg); }
+    70% { transform: scale(1.1) rotate(-5deg); }
+    80% { transform: scale(1.1) rotate(5deg); }
+    90% { transform: scale(1.1) rotate(-5deg); }
+    100% { transform: scale(1) rotate(0); }
 }
 
+/* -25 HP */
 @keyframes medium {
-    0% {transform: scale(1);}
-    50% {transform: scale(1.5);} 
-    100% {transform: scale(1);}
+    0% { transform: scale(0.5); }
+    100% { transform: scale(1); }
 }
 
+/* -35 HP */
 @keyframes strong {
-    0% {transform: scale(1);}
-    50% {transform: scale(1.7);} 
-    100% {transform: scale(1);}
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(-50px) scale(1.5); }
 }
 
+/* -50 HP */
 @keyframes massive {
-    0% {transform: scale(1);}
-    50% {transform: scale(2);} 
-    100% {transform: scale(1);}
+    0% { transform: rotate(0turn) scale(1); }
+    25% { transform: rotate(1turn) scale(1.5); }
+    50% { transform: rotate(1turn) scale(2); }
+    75% { transform: rotate(0turn) scale(1.5); }
+    100% { transform: rotate(0turn) scale(1); }
 }
 
-@keyframes gobackward {
-    0% {transform: scale(1);}
-    20% {transform: scale(0.6) rotate(-15deg);}
-    40% {transform: scale(0.6) rotate(15deg);}
-    60% {transform: scale(0.6) rotate(0deg);}
-    80% {transform: scale(0.6);}
-    100% {transform: scale(1);}
+@keyframes nodefense {
+    0% { opacity: 0.8; transform: scale(0.2); }
+    80% { opacity: 0; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(2.2); }
 }
 
-@keyframes shake {
-    0% {transform: translateX(0px);}
-    20% {transform: translateX(-10px);}
-    40% {transform: translateX(10px);}
-    60% {transform: translateX(-5px);}
-    80% {transform: translateX(5px);}
-    100% {transform: translateX(0px);}
+@keyframes somedefense {
+    0%, 100% { transform: translateX(0%); transform-origin: 50% 50%; }
+    15% { transform: translateX(-30px) rotate(-6deg); }
+    30% { transform: translateX(15px) rotate(6deg); }
+    45% { transform: translateX(-15px) rotate(-3.6deg); }
+    60% { transform: translateX(9px) rotate(2.4deg); }
+    75% { transform: translateX(-6px) rotate(-1.2deg); }
 }
 
-@keyframes spin {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);} 
+@keyframes totaldefense {
+    0%, 100% { transform: rotate(0deg); transform-origin: 50% 50%; }
+    10% {transform: rotate(8deg); }
+    20%, 40%, 60% { transform: rotate(-10deg); }
+    30%, 50%, 70% { transform: rotate(10deg); }
+    80% { transform: rotate(-8deg); }
+    90% { transform: rotate(8deg); }
 }
