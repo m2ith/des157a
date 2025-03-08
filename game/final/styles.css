@@ -105,7 +105,7 @@ body {
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;
+    line-height: 1.3em;
 }
 
 .health {
@@ -235,16 +235,17 @@ strong {
 
 #overlay p {
     color: white;
+    line-height: 1.5em;
 }
 
 .hidden-overlay {
-    /* display: none; */
+    display: none;
     visibility: hidden;
     opacity: 0;
 }
 
 .showing-overlay {
-    /* display: block; */
+    display: block;
     visibility: visible;
     opacity: 1;
 }
@@ -252,15 +253,22 @@ strong {
 #overlay {
     position: fixed;
     /* background-color: white; */
-    background-color: rgba(32, 108, 29, 0.95);
+    background-color: rgba(69, 56, 39, 0.95);
     border-radius: 15px;
+    padding: 15px;
     top: 25%;
     left: 32.5%;
-    width: 500px;
-    height: 50vh;
+    width: 490px;
+    height: 250px;
     transition-property: opacity, visibility;
     transition-duration: 1s;
     transition-timing-function: ease;
+}
+
+.open {
+    text-decoration: none;
+    color: white;
+    font-family: "Press Start 2P";
 }
 
 .close {
@@ -272,6 +280,10 @@ strong {
     /* padding: 12px; */
     border-radius: 9px;
     padding-top: 2px;
+}
+
+.spacer {
+    margin: 10px;
 }
 
 /***** INDEX ELEMENTS *****/
@@ -330,7 +342,7 @@ body {
 }
 
 #messages {
-    width: 440px;
+    width: 400px;
     height: 130px;
     border-radius: 20px;
     border: 5px solid #D3212A;
@@ -344,6 +356,19 @@ body {
 
 #messages p {
     flex: 0 0;
+    display: block;
+    margin: auto;
+    padding-left: 8px;
+    line-height: 1.3em;
+}
+
+#spawn-message {
+    overflow: hidden;
+    width: fit-content;
+    margin: 0 auto;
+    white-space: nowrap;
+    animation: typing 4s steps(20);
+    padding: 20px;
 }
 
 #lets-see {
@@ -357,14 +382,6 @@ body {
     background: #D3212A;
     display: block;
     margin: auto;
-}
-
-#spawn-message {
-    overflow: hidden;
-    width: fit-content;
-    margin: 0 auto;
-    white-space: nowrap;
-    animation: typing 4s steps(20);
 }
 
 #start:hover,#lets-see:hover, #quit:hover, .volume:hover, #attack:hover, #reset:hover, #info:hover, .close:hover {
