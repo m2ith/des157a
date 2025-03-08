@@ -223,6 +223,57 @@ strong {
     to { width: 100% }
 }
 
+/***** OVERLAY ELEMENTS *****/
+
+.overlay-content {
+    padding: 40px;
+}
+
+.close {
+    margin-bottom: 20px;
+}
+
+#overlay p {
+    color: white;
+}
+
+.hidden-overlay {
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing-overlay {
+    /* display: block; */
+    visibility: visible;
+    opacity: 1;
+}
+
+#overlay {
+    position: fixed;
+    /* background-color: white; */
+    background-color: rgba(32, 108, 29, 0.95);
+    border-radius: 15px;
+    top: 25%;
+    left: 32.5%;
+    width: 500px;
+    height: 50vh;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+.close {
+    color: white;
+    background-color: #D3212A;
+    border: none;
+    width: 50px;
+    height: 40px;
+    /* padding: 12px; */
+    border-radius: 9px;
+    padding-top: 2px;
+}
+
 /***** INDEX ELEMENTS *****/
 
 body {
@@ -316,11 +367,11 @@ body {
     animation: typing 4s steps(20);
 }
 
-#start:hover,#lets-see:hover, #quit:hover, #volume:hover, #attack:hover, #reset:hover, #info:hover {
+#start:hover,#lets-see:hover, #quit:hover, #volume:hover, #attack:hover, #reset:hover, #info:hover, .close:hover {
     border: 4px solid white;
 }
 
-#start, #lets-see, #quit, #volume, #attack, #reset, #info {
+#start, #lets-see, #quit, #volume, #attack, #reset, #info, .close {
     border: 4px solid #811016;
 }
 

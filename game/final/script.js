@@ -10,6 +10,8 @@
     const attackBtn = document.querySelector(`#attack`);
     const quitBtn = document.querySelector(`#quit`);
     const volumeBtn = document.querySelector(`#volume`);
+    const infoBtn = document.querySelector(`#info`);
+    const overlayCloseBtn = document.querySelector(`.close`);
 
     //GAME AUDIO
     //const cuijian = new Audio("../music/nothingtomyname_cuijian.mp3");
@@ -32,6 +34,24 @@
     //QUIT BUTTON
     document.querySelector(`#quit`).addEventListener("click", function(){
         window.location.href = "start.html";
+    });
+
+    //INFO OVERLAY
+    // THIS IS NOT WORKING, NEED TO FIX
+    infoBtn.addEventListener("click", function(event){
+        event.preventDefault();
+        document.querySelector(`#overlay`).className = "showing-overlay";
+    });
+
+    overlayCloseBtn.addEventListener("click", function(event){
+        event.preventDefault();
+        document.querySelector(`#overlay`).className = "hidden-overlay";
+    });
+
+    document.addEventListener("keydown", function(event){
+        if (event.key == `Escape`) {
+            document.querySelector(`#overlay`).className = "hidden";
+        }
     });
 
     //GAME INFORMATION
