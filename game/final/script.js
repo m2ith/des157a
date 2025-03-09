@@ -121,7 +121,7 @@
     /* This is where most of the action takes place */
     function catAttack() {
 
-        // hese are images variables for Keva cat[0] attacking or defendings
+        // These are images variables for Keva cat[0] attacking or defendings
         const attackKevaImage = "../images/my-cats/k-attack1.png";
         const defendKevaImage = "../images/my-cats/k-defense1.png";
         const neutralKevaImage = "../images/my-cats/k-neutral1.png";
