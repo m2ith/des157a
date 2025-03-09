@@ -126,12 +126,19 @@
         const defendKevaImage = "../images/my-cats/k-defense1.png";
         const neutralKevaImage = "../images/my-cats/k-neutral1.png";
 
+        // These are images variables for Whispurr cat[1] attacking or defendings
+        const attackWhispurrImage = "../images/my-cats/w-attack1.png";
+        const defendWhispurrImage = "../images/my-cats/w-defense1.png";
+        const neutralWhispurrImage = "../images/my-cats/w-neutral1.png";
+
         // Function to change the image of cat0 when cat0 is attacking
         function changeCat0AttackImg() {
             if (document.querySelector(`#${attacker = gameData.cats[0]}`)) {
                 document.querySelector(`#${attacker = gameData.cats[0]}`).src = attackKevaImage;
-            } else {
-                console.error(`Element with ID ${attacker} not found`);
+            } /* else if (document.querySelector(`#${defender = gameData.cats[1]}`)) {
+                document.querySelector(`#${defender = gameData.cats[1]}`).src = defendWhispurrImage;
+            }  */else {
+                console.error("There is an issue with the changeCat0AttackImg function");
             }
             // This returns the cat0 image back to neutral
             setTimeout(() => {
@@ -139,34 +146,14 @@
             }, 2500);
         };
 
-        // Function to change the image of cat0 when cat0 is defending
-        function changeCat0DefendImg() {
-            if (document.querySelector(`#${defender = gameData.cats[0]}`)) {
-                document.querySelector(`#${defender = gameData.cats[0]}`).src = defendKevaImage;
-            } else {
-                console.error(`Element with ID ${defender} not found`);
-            }
-            // This returns the cat0 image back to neutral
-            setTimeout(() => {
-                document.querySelector(`#${defender = gameData.cats[0]}`).src = neutralKevaImage;
-            }, 2500);
-        };
-
-        // Run the function
-        changeCat0AttackImg();
-        changeCat0DefendImg();
-
-        // These are images variables for Whispurr cat[1] attacking or defendings
-        const attackWhispurrImage = "../images/my-cats/w-attack1.png";
-        const defendWhispurrImage = "../images/my-cats/w-defense1.png";
-        const neutralWhispurrImage = "../images/my-cats/w-neutral1.png";
-
         // Function to change the image of cat1 when cat1 is attacking
         function changeCat1AttackImg() {
             if (document.querySelector(`#${attacker = gameData.cats[1]}`)) {
                 document.querySelector(`#${attacker = gameData.cats[1]}`).src = attackWhispurrImage;
-            } else {
-                console.error(`Element with ID ${attacker} not found`);
+            } /* else if (document.querySelector(`#${defender = gameData.cats[0]}`)) {
+                document.querySelector(`#${defender = gameData.cats[0]}`).src = defendKevaImage;
+            } */ else {
+                console.error("There is an issue with the changeCat1AttackImg function");
             }
             // This returns the cat1 image back to neutral
             setTimeout(() => {
@@ -174,22 +161,9 @@
             }, 2500);
         };
 
-        // Function to change the image of cat1 when cat1 is defending
-        function changeCat1DefendImg() {
-            if (document.querySelector(`#${defender = gameData.cats[1]}`)) {
-                document.querySelector(`#${defender = gameData.cats[1]}`).src = defendWhispurrImage;
-            } else {
-                console.error(`Element with ID ${defender} not found`);
-            }
-            // This returns the cat1 image back to neutral
-            setTimeout(() => {
-                document.querySelector(`#${defender = gameData.cats[1]}`).src = neutralWhispurrImage;
-            }, 2500);
-        };
-
         // Run the function
+        changeCat0AttackImg();
         changeCat1AttackImg();
-        changeCat1DefendImg();
 
         /* If gameData.index is 1, the statement is true and it must be ployer 2's turn. Set the attacker to player 2 and the defender to player 1. Set the defenderIndex to zero. If this statement is false, do the opposite. */
         if (gameData.index) {
@@ -235,7 +209,7 @@
                 gameData.health[defenderIndex] = gameData.health[defenderIndex] - gameData.attack[thisAttack] / 2;
             }
 
-            // This variable is used to ensure that the data is convered to a number and is rounded down.
+            // This variable is used to ensure that the data is converted to a number and is rounded down.
             let health = Math.floor(parseFloat(gameData.health[defenderIndex]));
             /* You can't have less than zero health. That would screw up the health bar, so if the
             health is less than zero, set it to zero. */
@@ -251,14 +225,6 @@
     }
 
     function checkWinningCondition(enemy, attackingCat) {
-        // Reset the image of both cats
-        if (cat1 && cat1.nodeType === Node.ELEMENT_NODE) {
-            cat1.src = "../images/my-cats/k-neutral1.png";
-        }
-        if (cat2 && cat2.nodeType === Node.ELEMENT_NODE) {
-            cat2.src = "../images/my-cats/w-neutral1.png";
-        }
-
         // Wait three seconds, so users can read the screen and the animation can finish.
         setTimeout(function () {
             // Remove the animation classes from the cats...
