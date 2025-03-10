@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game On: Cat Fight</title>
+    <title>Cat Fight: Information</title>
 
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
@@ -12,28 +12,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-
+    
     <!-- Stylesheet -->
     <link href="styles.css" rel="stylesheet">
-
+    
     <!-- JavaScript -->
     <script src="script.js" defer></script>
 </head>
 <body>
     <div class="home">
         <img src="../images/background.png" alt="background" id="background">
-        <img src="../images/title-name.png" alt="title name" id="title-name">
-
-        <p id="start-message">The player has come across a clearing...</p>
-        <button id="start"><a href="index.html">Start</a>></button>
 
         <button class="volume">
             <img src="../images/volume-off.png" alt="volume" class="volume-img">
         </button>
 
         <div class="controls">
-            <button id="info"><a href="info.html">Info</a></button>
+            <button id="return"><a href="start.html">Return</a></button>
         </di>
+
+        <div id="window-info">
+            <p class="info">This is best viewed on a 1395x744 sized window.</p>
+            <div class="spacer"></div>
+            <p class="info">Please resize your window for the best experience.</p>
+        </div>
+
+        <div id="source-info">
+            <p class="info">Image Sources:</p>
+            <div class="spacer"></div>
+            <p class="info"><a href="https://www.artstation.com/artwork/0PKZ8" target="_blank">Background Image</a></p>
+            <div class="spacer"></div>
+            <p class="info">Sound Sources:</p>
+            <div class="spacer"></div>
+            <p class="info"><a href="https://soundcloud.com/eric-skiff/underclocked-underunderclocked" target="_blank">Game Audio</a></p>
+            <p class="info"><a href="#" target="_blank">Game Button Audio</a></p>
+        </div>
     </div>
 </body>
 </html>

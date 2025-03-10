@@ -2,19 +2,18 @@
     "use strict";
     console.log("reading JS");
 
-    /* Variables needed for interface elements in the HTML */
+    // Interface Variables
+    const volumeBtn = document.querySelector(`.volume`);
+    const volumeImg = document.querySelector(`.volume-img`);
+    
+    // Game Variables
     const cat1 = document.querySelector(`#keva`);
     const cat2 = document.querySelector(`#whispurr`);
     const messages = document.querySelector(`#messages`);
     const startBtn = document.querySelector(`#lets-see`);
     const attackBtn = document.querySelector(`#attack`);
-    const quitBtn = document.querySelector(`#quit`);
-    const volumeBtn = document.querySelector(`.volume`);
-    const volumeImg = document.querySelector(`.volume-img`);
-    const infoBtn = document.querySelector(`#info`);
-    const overlayCloseBtn = document.querySelector(`.close`);
 
-    // GAME AUDIO
+    // Audio Variables
     const gameAudio = new Audio("music/underclocked-ericskiff.mp3");
     let isGameAudioPlaying = false;
     gameAudio.loop = true;
@@ -51,36 +50,6 @@
             });
         }, 500); // 500ms delay
     });
-
-    // QUIT BUTTON
-    quitBtn.addEventListener("click", function () {
-        window.location.href = "start.html";
-    });
-
-    // INFO OVERLAY
-    // THIS IS NOT WORKING, NEED TO FIX
-    /*     const controls = document.querySelector(`#controls`)
-    
-        controls.addEventListener(function(){
-            const openBtn = document.querySelector(`.open`);
-            const closeBtn = document.querySelector(`.close`);
-        }); 
-        
-        document.querySelector(`.open`).addEventListener("click", function(event){
-                event.preventDefault();
-                document.querySelector(`#overlay`).className = "showing";
-            });
-    
-        document.querySelector(`.close`).addEventListener("click", function(event){
-                event.preventDefault();
-                document.querySelector(`#overlay`).className = "hidden";
-        });
-    
-        document.addEventListener("keydown", function(event){
-                if (event.key == `Escape`) {
-                    document.querySelector(`#overlay`).className = "hidden";
-                }
-        }); */
 
     // GAME INFORMATION
     /* These variables are assigned later and used to keep track of the state of the game. Attacker and defender will end up just being the name of the monster for the person who is attacking and the person who is defending. DefenderIndex will be 0 or 1, whichever player is not attacking. */
