@@ -186,7 +186,7 @@
 
         // These generate the random attack of 0-4 and the random defense of 0-2
         const thisAttack = Math.floor(Math.random() * 5);
-        const thisdDefense = Math.floor(Math.random() * 3);
+        const thisDefense = Math.floor(Math.random() * 3);
 
         // Hide the attack button again, until the next turn
         attackBtn.className = "hidden";
@@ -205,14 +205,14 @@
         /* Wait 2.5 seconds so the CSS attacking animation can finish and the user can read the attack message*/
         setTimeout(function () {
             // Update the messages div with a defense message
-            messages.innerHTML = `<p><strong>${defender}</strong> has ${gameData.defendMessage[thisdDefense]}</p>`;
+            messages.innerHTML = `<p><strong>${defender}</strong> has ${gameData.defendMessage[thisDefense]}</p>`;
             // Put the correct defense animation on the defending cat
-            document.querySelector(`#${defender}`).className = `defend${thisdDefense}`;
+            document.querySelector(`#${defender}`).className = `defend${thisDefense}`;
 
             /* If there is no defense, update the healthbar of the defending cat by subtracting total attack from it's current health. If there was partial defense subtract half the health. If a 2 was rolled, nothing happens to the healthbar, because it was total defense. */
-            if (thisdDefense == 0) {
+            if (thisDefense == 0) {
                 gameData.health[defenderIndex] = gameData.health[defenderIndex] - gameData.attack[thisAttack];
-            } else if (thisdDefense == 1) {
+            } else if (thisDefense == 1) {
                 gameData.health[defenderIndex] = gameData.health[defenderIndex] - gameData.attack[thisAttack] / 2;
             }
 
