@@ -5,18 +5,30 @@
     // Interface Variables
     const volumeBtn = document.querySelector(`.volume`);
     const volumeImg = document.querySelector(`.volume-img`);
-    
+
     // Game Variables
     const cat1 = document.querySelector(`#keva`);
     const cat2 = document.querySelector(`#whispurr`);
     const messages = document.querySelector(`#messages`);
-    const startBtn = document.querySelector(`#lets-see`);
+    const startBtn = document.querySelector(`#start`);
+    const spawnBtn = document.querySelector(`#lets-see`);
     const attackBtn = document.querySelector(`#attack`);
+    const infoBtn = document.querySelector(`#info`);
 
     // Audio Variables
+    //const buttonClick = new Audio("music/button-click.mp3")
     const gameAudio = new Audio("music/underclocked-ericskiff.mp3");
     let isGameAudioPlaying = false;
+    //let buttonAudio = false;
     gameAudio.loop = true;
+
+    // TypeIt Animations
+    new TypeIt("#spawn-message", {
+        strings: ["Two cats spawned!", "It's a stare off..", "Who will break it?"],
+        speed: 30,
+        lifeLike: true,
+        waitUntilVisible: true,
+    }).go();
 
     document.addEventListener('DOMContentLoaded', function () {
         console.log("DOM fully loaded and parsed");
@@ -51,6 +63,31 @@
         }, 500); // 500ms delay
     });
 
+    // BUTTONS AUDIO
+    /* startBtn.addEventListener("click", () => {
+        playButtonSound();
+        console.log("Start button clicked");
+    });
+
+    infoBtn.addEventListener("click", () => {
+        playButtonSound();
+        console.log("Start button clicked");
+    });
+
+    spawnBtn.addEventListener("click", () => {
+        playButtonSound();
+        console.log("Start button clicked");
+    });
+
+    attackBtn.addEventListener("click", () => {
+        playButtonSound();
+    }); 
+
+    function playButtonSound() {
+        buttonClick.currentTime = 0; // Rewind to the beginning
+        buttonClick.play();
+    } */
+
     // GAME INFORMATION
     /* These variables are assigned later and used to keep track of the state of the game. Attacker and defender will end up just being the name of the monster for the person who is attacking and the person who is defending. DefenderIndex will be 0 or 1, whichever player is not attacking. */
     let attacker;
@@ -78,7 +115,7 @@
     2
     /* This kicks off the game. Note the attack button starts as hidden, and then is only shown at times when the player can attack. I don't want to remove the button entirely, as that would require adding the event listener back every time the button gets put back on the page. */
 
-    startBtn.addEventListener("click", function () {
+    spawnBtn.addEventListener("click", function () {
         gameData.index = Math.round(Math.random());
         messages.innerHTML = `<p>Get ready! <strong>${gameData.cats[gameData.index]}</strong> became agitated. Click the attack button to see what happens.</p>`;
         attackBtn.className = "showing";
@@ -90,12 +127,12 @@
     /* This is where most of the action takes place */
     function catAttack() {
 
-        // These are images variables for Keva cat[0] attacking or defendings
+        // These are images variables for Keva cat[0] attacking or defending
         const attackKevaImage = "../images/my-cats/k-attack1.png";
         const defendKevaImage = "../images/my-cats/k-defense1.png";
         const neutralKevaImage = "../images/my-cats/k-neutral1.png";
 
-        // These are images variables for Whispurr cat[1] attacking or defendings
+        // These are images variables for Whispurr cat[1] attacking or defending
         const attackWhispurrImage = "../images/my-cats/w-attack1.png";
         const defendWhispurrImage = "../images/my-cats/w-defense1.png";
         const neutralWhispurrImage = "../images/my-cats/w-neutral1.png";
