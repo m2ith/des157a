@@ -143,7 +143,7 @@
                 document.querySelector(`#${attacker = gameData.cats[0]}`).src = attackKevaImage;
             } /* else if (document.querySelector(`#${defender = gameData.cats[1]}`)) {
                 document.querySelector(`#${defender = gameData.cats[1]}`).src = defendWhispurrImage;
-            }  */else {
+            } */ else {
                 console.error("There is an issue with the changeCat0AttackImg function");
             }
             // This returns the cat0 image back to neutral
@@ -171,7 +171,7 @@
         changeCat0AttackImg();
         changeCat1AttackImg();
 
-        /* If gameData.index is 1, the statement is true and it must be ployer 2's turn. Set the attacker to player 2 and the defender to player 1. Set the defenderIndex to zero. If this statement is false, do the opposite. */
+        /* If gameData.index is 1, the statement is true and it must be player 2's turn. Set the attacker to player 2 and the defender to player 1. Set the defenderIndex to zero. If this statement is false, do the opposite. */
         if (gameData.index) {
             attacker = gameData.cats[1];
             defender = gameData.cats[0];
@@ -203,7 +203,7 @@
 
         /* Wait 2.5 seconds so the CSS attacking animation can finish and the user can read the attack message*/
         setTimeout(function () {
-            //Update the messages div with a defense message
+            // Update the messages div with a defense message
             messages.innerHTML = `<p><strong>${defender}</strong> has ${gameData.defendMessage[thisdDefense]}</p>`;
             // Put the correct defense animation on the defending cat
             document.querySelector(`#${defender}`).className = `defend${thisdDefense}`;
