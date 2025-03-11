@@ -10,10 +10,10 @@
     const cat1 = document.querySelector(`#keva`);
     const cat2 = document.querySelector(`#whispurr`);
     const messages = document.querySelector(`#messages`);
-    const startBtn = document.querySelector(`#start`);
+    //const startBtn = document.querySelector(`#start`);
     const spawnBtn = document.querySelector(`#lets-see`);
     const attackBtn = document.querySelector(`#attack`);
-    const infoBtn = document.querySelector(`#info`);
+    //const infoBtn = document.querySelector(`#info`);
 
     // Audio Variables
     //const buttonClick = new Audio("music/button-click.mp3")
@@ -22,16 +22,16 @@
     //let buttonAudio = false;
     gameAudio.loop = true;
 
-    // TypeIt Animations
-    new TypeIt("#spawn-message", {
-        strings: ["Two cats spawned!", "It's a stare off..", "Who will break it?"],
-        speed: 30,
-        lifeLike: true,
-        waitUntilVisible: true,
-    }).go();
-
     document.addEventListener('DOMContentLoaded', function () {
         console.log("DOM fully loaded and parsed");
+
+        // TypeIt Animations
+        new TypeIt("#spawn-message", {
+            strings: ["Two cats spawned!", "It's a stare off..", "Who will break it?"],
+            speed: 75,
+            lifeLike: true,
+            waitUntilVisible: true,
+        }).go();
 
         // GAME AUDIO
         // Add a small delay before executing the volume control logic
