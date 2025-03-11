@@ -71,16 +71,17 @@
 
     infoBtn.addEventListener("click", () => {
         playButtonSound();
-        console.log("Start button clicked");
+        console.log("Info button clicked");
     });
 
     spawnBtn.addEventListener("click", () => {
         playButtonSound();
-        console.log("Start button clicked");
+        console.log("Spawn button clicked");
     });
 
     attackBtn.addEventListener("click", () => {
         playButtonSound();
+        console.log("Attack button clicked");
     }); 
 
     function playButtonSound() {
