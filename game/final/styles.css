@@ -492,6 +492,47 @@ body {
     grid-area: B;
 }
 
+/***** WINNER CROWN *****/
+
+#k-crown {
+    position: absolute;
+    top: 29.5%;
+    left: 37%;
+    /* animation: ping 2s ease 0s 1 normal none; */
+    animation: win1 2s;
+    animation-iteration-count: infinite;
+}
+
+#w-crown {
+    position: absolute;
+    top: 10%;
+    left: 61%;
+    /* animation: ping 2s ease 0s 1 normal none; */
+    animation: win2 2s;
+    animation-iteration-count: infinite;
+}
+
+/* @keyframes ping {
+    0% { transform: scale(0.2); opacity: 0.8; } 
+    80% { transform: scale(1.2); opacity: 1; } 
+    100% { transform: scale(1.2); opacity: 0;} } */
+
+@keyframes win1 {
+    0% { transform: rotate(0deg); opacity: 1; }
+    25% { transform: rotate(-5deg); opacity: 0.8; }
+    50% { transform: rotate(0eg); opacity: 0.75; }
+    75% { transform: rotate(-5deg); opacity: 0.8; }
+    100% { transform: rotate(0deg); opacity: 1;}
+}
+
+@keyframes win2 {
+    0% { transform: rotate(0deg); opacity: 1; }
+    25% { transform: rotate(5deg); opacity: 0.8; }
+    50% { transform: rotate(0eg); opacity: 0.75; }
+    75% { transform: rotate(5deg); opacity: 0.8; }
+    100% { transform: rotate(0deg); opacity: 1;}
+}
+
 /***** JS FOCUS *****/
 
 .hidden {

@@ -15,6 +15,10 @@
     const attackBtn = document.querySelector(`#attack`);
     //const infoBtn = document.querySelector(`#info`);
 
+    // Winner Variables
+    const crown0 = document.querySelector(`#k-crown`);
+    const crown1 = document.querySelector(`#w-crown`);
+
     // Audio Variables
     //const buttonClick = new Audio("music/button-click.mp3")
     const gameAudio = new Audio("music/underclocked-ericskiff.mp3");
@@ -38,6 +42,7 @@
         setTimeout(function () {
             volumeBtn.addEventListener("click", function () {
                 //console.log("Volume button clicked");
+                // If the volume is not playing then play it when clicked and change the volume button image to show it playing
                 if (!isGameAudioPlaying) {
                     console.log("Playing audio");
                     gameAudio.play();
@@ -49,6 +54,7 @@
                         console.error("volumeImg is null");
                     }
                 } else {
+                    // Pause the audio and revert the image back to the muted volume image on the volume button
                     console.log("Pausing audio");
                     gameAudio.pause();
                     isGameAudioPlaying = false;
@@ -220,7 +226,7 @@
             let health = Math.floor(parseFloat(gameData.health[defenderIndex]));
             /* You can't have less than zero health. That would screw up the health bar, so if the
             health is less than zero, set it to zero. */
-            if (health < 0) { health = 0; }
+            if (health < 0) {health = 0;}
             // Set the width of the healthbar to reflect the correct percentage.
             document.querySelector(`#healthbar${defenderIndex} div`).style.width = `${health}%`;
             // Set the number next to the health bar to reflect the correct percentage.
@@ -245,10 +251,24 @@
             }
             /* As before, we need to make sure the health of the defending cat is converted into a number and rounded down. */
             const health = Math.floor(parseFloat(gameData.health[enemy]));
-            // If the health is less than 1, the winning condition has been met for the attacking cat
+            // If the health is less than 1, the winning condition has been met for the attacking cat, and if the winning cat is cat0, display the winning crown, and if the winning cat is cat1, then display the winning cat
             if (health < 1) {
+                if (attackingCat = gameData.cats[0]) {
+                    crown0.className = "showing";
+                } else if (attackingCat = gameData.cats[1]) {
+                    crown1.className = "showing";
+                } else {
+                    console.log("There is an issue with showing the winning crown")
+                }
                 /* Set the message about winning */
-                messages.innerHTML = `<p><strong>${attackingCat}</strong> has won the battle! Start another battle?</p>`;
+                // messages.innerHTML = `<p><strong>${attackingCat}</strong> has won the battle! Start another battle?</p>`;
+                if (attackingCat = gameData.cats[0]) {
+                    messages.innerHTML = `<p><strong>${attackingCat = gameData.cats[0]}</strong> has won the battle! Start another battle?</p>`;
+                } else if (attackingCat = gameData.cats[1]) {
+                    messages.innerHTML = `<p><strong>${attackingCat = gameData.cats[1]}</strong> has won the battle! Start another battle?</p>`;
+                } else {
+                    console.log("Winning message is not displaying correctly")
+                }
                 /* Create a button for a new battle */
                 messages.innerHTML += '<button id="reset">Battle Again</button>';
                 /* Refresh the page, so everything starts over fresh */
