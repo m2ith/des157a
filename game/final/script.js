@@ -27,7 +27,7 @@
 
         // TypeIt Animations
         new TypeIt("#spawn-message", {
-            strings: ["Two cats spawned!", "It's a stare off..", "Who will break it?"],
+            strings: ["Two cats spawned!", "It's a stare off...", "Who will break it?"],
             speed: 75,
             lifeLike: true,
             waitUntilVisible: true,
