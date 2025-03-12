@@ -70,6 +70,7 @@
     });
 
     // BUTTONS AUDIO
+    // NEED TO FIX: When implemented it overruns the game functions and interactions
     /* startBtn.addEventListener("click", () => {
         playButtonSound();
         console.log("Start button clicked");
@@ -252,6 +253,7 @@
             /* As before, we need to make sure the health of the defending cat is converted into a number and rounded down. */
             const health = Math.floor(parseFloat(gameData.health[enemy]));
             // If the health is less than 1, the winning condition has been met for the attacking cat, and if the winning cat is cat0, display the winning crown, and if the winning cat is cat1, then display the winning cat
+            // NEED TO FIX: This is not xorrectly showing the winner, shows the corwn and winning message for the loser
             if (health < 1) {
                 if (attackingCat = gameData.cats[0]) {
                     crown0.className = "showing";
