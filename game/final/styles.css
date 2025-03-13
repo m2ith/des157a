@@ -314,15 +314,7 @@ strong {
     padding-top: 2px;
 }
 
-.green {
-    color: #2C8035;
-}
-
 /***** INDEX ELEMENTS *****/
-
-body {
-    background: white;
-}
 
 #Keva {
     position: absolute;
@@ -525,7 +517,7 @@ body {
 @keyframes win1 {
     0% { transform: rotate(0deg); opacity: 1; }
     25% { transform: rotate(-5deg); opacity: 0.8; }
-    50% { transform: rotate(0eg); opacity: 0.75; }
+    50% { transform: rotate(0deg); opacity: 0.75; }
     75% { transform: rotate(-5deg); opacity: 0.8; }
     100% { transform: rotate(0deg); opacity: 1;}
 }
@@ -533,7 +525,7 @@ body {
 @keyframes win2 {
     0% { transform: rotate(0deg); opacity: 1; }
     25% { transform: rotate(5deg); opacity: 0.8; }
-    50% { transform: rotate(0eg); opacity: 0.75; }
+    50% { transform: rotate(0deg); opacity: 0.75; }
     75% { transform: rotate(5deg); opacity: 0.8; }
     100% { transform: rotate(0deg); opacity: 1;}
 }
